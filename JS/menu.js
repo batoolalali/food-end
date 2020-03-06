@@ -12,7 +12,7 @@ var extra=[' Drink', ' Potato', ' Agliata Sauce']
 function MealItalian(dish, imgPath, ingredients) {
     this.dish = dish;
     this.price;
-    this.imgPath = imgPath;
+    this.imgPath = `../IMG/${imgPath}`;
     this.ingredients=ingredients;
     // this.extraPrice;
     mealsItalian.push(this);
@@ -20,12 +20,13 @@ function MealItalian(dish, imgPath, ingredients) {
 }
 
 
+
 MealItalian.prototype.randomPrice = function () {
 
-    this.price = Math.floor(Math.random() * (50 - 10 + 1) + 10);
+    this.price = Math.floor(Math.random() * (25 - 10 + 1) + 10);
 }
 
-
+var counter=0;
 
 MealItalian.prototype.render = function () {
 
@@ -41,7 +42,9 @@ MealItalian.prototype.render = function () {
     // for (var i=0; i<)
     var myImg=document.createElement('img');
     li1.appendChild(myImg);
-    myImg.setAttribute('scr', this.imgPath);
+    myImg.setAttribute('src', this.imgPath);
+    myImg.setAttribute('alt', "img");
+
     var span1=document.createElement('span');
     li1.appendChild(span1);
     span1.textContent=this.ingredients;
@@ -57,11 +60,14 @@ MealItalian.prototype.render = function () {
     var input1=document.createElement('input');
     myform.appendChild(input1);
     input1.setAttribute('type', 'checkbox');
-    input1.setAttribute('id', 'extra1');
+    input1.setAttribute('id', `extra${counter}`);
     var label1=document.createElement('label');
-    label1.setAttribute('for', 'extra1');
+    label1.setAttribute('for', `extra${counter}`);
     label1.textContent=extra[i];
     myform.appendChild(label1);
+    counter++;
+    console.log(this.imgPath, 'hi');
+    
 }
 
 console.log(this.ingredients);
@@ -70,11 +76,11 @@ console.log(this.ingredients);
 
 
 
-var italyDish1 = new MealItalian(italianDishs[0], '../IMG/Cannolo.jpg', italy1 );
-var italyDish2 = new MealItalian(italianDishs[1], '../IMG/Minestra di ceci.png', italy2 );
-var italyDish3 = new MealItalian(italianDishs[2], '../IMG/italianFood.jpg', italy3 );
-var italyDish4 = new MealItalian(italianDishs[3], '../IMG/pizza.jpg', italy4 );
-var italyDish5 = new MealItalian(italianDishs[4], '../IMG/Veal Milanese.jpg', italy5 );
+var italyDish1 = new MealItalian(italianDishs[0], 'Cannolo.jpg', italy1 );
+var italyDish2 = new MealItalian(italianDishs[1], 'Minestra di ceci.png', italy2 );
+var italyDish3 = new MealItalian(italianDishs[2], 'italianFood.jpg', italy3 );
+var italyDish4 = new MealItalian(italianDishs[3], 'pizza.jpg', italy4 );
+var italyDish5 = new MealItalian(italianDishs[4], 'Veal Milanese.jpg', italy5 );
 
 function popUp(){
 
