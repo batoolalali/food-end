@@ -19,8 +19,9 @@ function MealItalian(dish, imgPath, ingredients) {
 }
 MealItalian.prototype.randomPrice = function () {
 
-    this.price = Math.floor(Math.random() * (25 - 10 + 1) + 10);
+    this.price = Math.floor(Math.random() * (12 - 5 + 1) + 5);
 }
+
 var counter = 0;
 
 MealItalian.prototype.render = function () {
@@ -63,34 +64,41 @@ MealItalian.prototype.render = function () {
         console.log(this.imgPath, 'hi');
     }
 
+    var addOrder= document.createElement('button');
+    myform.appendChild(addOrder);
+    addOrder.textContent="Add to Order";
     console.log(this.ingredients);
 }
 
-var italyDish1 = new MealItalian(italianDishs[0], 'Cannolo.jpg', italy1);
+
+var italyDish1 = new MealItalian(italianDishs[0], 'Cioppino.jpg', italy1);
 var italyDish2 = new MealItalian(italianDishs[1], 'Minestra di ceci.png', italy2);
-var italyDish3 = new MealItalian(italianDishs[2], 'italianFood.jpg', italy3);
-var italyDish4 = new MealItalian(italianDishs[3], 'pizza.jpg', italy4);
-var italyDish5 = new MealItalian(italianDishs[4], 'Veal Milanese.jpg', italy5);
+var italyDish3 = new MealItalian(italianDishs[2], 'pizza.jpg', italy3);
+var italyDish4 = new MealItalian(italianDishs[3], 'Veal Milanese.jpg', italy4);
+var italyDish5 = new MealItalian(italianDishs[4], 'Cannolo.jpg', italy5);
 
+var pop=0;
 function popUp() {
-
+    if (pop==0){
     for (var i = 0; i < mealsItalian.length; i++) {
         mealsItalian[i].render();
     }
+pop++;}
 }
 console.log(mealsItalian);
 	
-// indian food
+//indian food
 var mealsIndian = [];
 var indianDishs = ['Biryani: ', ' Chaat: ', 'Aloo shimla mirch: ', 'Poha: ', 'Paratha: '];
 var indian1 = [' Mixed rice', ' spices', ' vegetables', ' meats', ' plain yogurt'];
 var indian2 = [' Potato patty fried', ' oil', ' sweet yogurt', ' sauces', ' tomato', ' spices'];
-var indian3 = [' Green capsicum', ' potatoes sautéed', ' cumin seeds', ' onions', 'ginger-garlic paste', 'red chilli powder'];
+var indian3 = [' Green capsicum', ' potatoes sautéed', ' onions', 'red chilli powder'];
 var indian4 = [' Flattended rice', '  potato', 'turmeric', ' lemon'];
 var indian5 = [' Wheat flour', ' potato mixture', ' paneer'];
-var extraTOIndian = [' Drink', ' Potato', ' Hot Sauce']
+var extraTOIndian = [' Rice', ' Squared onions', ' Hot Sauce'];
 
 function MealIndian(dish, imgPath, ingredients) {
+
     this.dish = dish;
     this.price;
     this.imgPath = `../IMG/${imgPath}`;
@@ -100,19 +108,22 @@ function MealIndian(dish, imgPath, ingredients) {
 }
 MealIndian.prototype.randomPrice = function () {
 
-    this.price = Math.floor(Math.random() * (25 - 10 + 1) + 10);
+    this.price = Math.floor(Math.random() * (12 - 5 + 1) + 5);
 }
 var counter1 = 0;
 
-MealIndian.prototype.render = function () {
+var myMenu1 = document.getElementById('indianDish');
+var ul2 = document.createElement('ul');
+myMenu1.appendChild(ul2);
+
+MealIndian.prototype.render1 = function () {
 
     this.randomPrice();
-    var myMenu = document.getElementById('indianFood');
-    var ul1 = document.createElement('ul');
-    myMenu.appendChild(ul1);
+   
+    console.log('in Indian render');
 
     var li1 = document.createElement('li');
-    ul1.appendChild(li1);
+    ul2.appendChild(li1);
     li1.textContent = `${this.dish} `;
     // for (var i=0; i<)
     var myImg = document.createElement('img');
@@ -143,21 +154,24 @@ MealIndian.prototype.render = function () {
         counter1++;
         console.log(this.imgPath, 'hi');
     }
-
+    var addOrder= document.createElement('button');
+    myform.appendChild(addOrder);
+    addOrder.textContent="Add to Order";
     console.log(this.ingredients);
 }
 
-var indianDish1 = new MealItalian(indianDishs[0], 'biryani.jpg', indian1);
-var indianDish2 = new MealItalian(indianDishs[1], 'cheat.png', indian2);
-var indianDish3 = new MealItalian(indianDishs[2], 'Alooshimlamirch.jpg', indian3);
-var indianDish4 = new MealItalian(indianDishs[3], 'poha.jpg', indian4);
-var indianDish5 = new MealItalian(indianDishs[4], 'Mintparatha.jpg', indian5);
-
-function popUp() {
-
+var indianDish1 = new MealIndian(indianDishs[0], 'biryani.jpg', indian1);
+var indianDish2 = new MealIndian(indianDishs[1], 'cheat.jpg', indian2);
+var indianDish3 = new MealIndian(indianDishs[2], 'Alooshimlamirch.jpg', indian3);
+var indianDish4 = new MealIndian(indianDishs[3], 'poha.jpg', indian4);
+var indianDish5 = new MealIndian(indianDishs[4], 'Mintparatha.jpg', indian5);
+var pop1=0;
+function popUp1() {
+    if(pop1==0){
     for (var i = 0; i < mealsIndian.length; i++) {
-        mealsIndian[i].render();
+        mealsIndian[i].render1();
     }
+        pop1++;}
 }
 console.log(mealsIndian);
 
@@ -168,8 +182,8 @@ var Arabian1 = [' rice', ' lamb', ' bulgur', ' sauce', ' dried yogurt'];
 var Arabian2 = [' chicken', ' rice', ' fried vegetables', ' sauces', ' spices'];
 var Arabian3 = [' chicken baked', ' onions', ' sumac', ' allspice', 'saffron', 'taboon bread'];
 var Arabian4 = [' ground chickpeas', ' fava beans', 'Herbs', ' spices', 'onion'];
-var Arabian5 = [' Chicken', ' potato mixture', ' mixed spices', 'black pepper','olive oil', 'flour'];
-var extraToArabian = [' Drink', ' squared onions', ' Hot Sauce']
+var Arabian5 = [' Chicken', ' potato mixture', ' mixed spices','olive oil', 'flour'];
+var extraToArabian = [' Drink', ' Yogurt', ' Arabian Salad']
 
 function MealArabian(dish, imgPath, ingredients) {
     this.dish = dish;
@@ -177,23 +191,26 @@ function MealArabian(dish, imgPath, ingredients) {
     this.imgPath = `../IMG/${imgPath}`;
     this.ingredients = ingredients;
     // this.extraPrice;
-    mealsIndian.push(this);
+    mealsArabian.push(this);
 }
 MealArabian.prototype.randomPrice = function () {
 
-    this.price = Math.floor(Math.random() * (25 - 10 + 1) + 10);
+    this.price = Math.floor(Math.random() * (12 - 5 + 1) + 5);
 }
 var counter2 = 0;
 
-MealArabian.prototype.render = function () {
+var myMenu3 = document.getElementById('arabianDish');
+    var ul3 = document.createElement('ul');
+    myMenu3.appendChild(ul3);
+MealArabian.prototype.render2 = function () {
 
     this.randomPrice();
-    var myMenu = document.getElementById('arabianFood');
-    var ul1 = document.createElement('ul');
-    myMenu.appendChild(ul1);
+    var myMenu3 = document.getElementById('arabianDish');
+    var ul3 = document.createElement('ul');
+    myMenu3.appendChild(ul3);
 
     var li1 = document.createElement('li');
-    ul1.appendChild(li1);
+    ul3.appendChild(li1);
     li1.textContent = `${this.dish} `;
     // for (var i=0; i<)
     var myImg = document.createElement('img');
@@ -224,21 +241,30 @@ MealArabian.prototype.render = function () {
         counter2++;
         console.log(this.imgPath, 'hi');
     }
-
+    var addOrder= document.createElement('button');
+    myform.appendChild(addOrder);
+    addOrder.textContent="Add to Order";
+    
     console.log(this.ingredients);
 }
 
-var ArabianDish1 = new MealItalian(ArabianDishs[0], '3_Mansaf-National-Dish.jpg', Arabian1);
-var ArabianDish2 = new MealItalian(ArabianDishs[1], 'maqloba.png', Arabian2);
-var ArabianDish3 = new MealItalian(ArabianDishs[2], 'Musakhan-Sumac-Chicken-Recipe-7.jpg', Arabian3);
-var ArabianDish4 = new MealItalian(ArabianDishs[3], 'Falafel-Recipe-20.jpg', Arabian4);
-var ArabianDish5 = new MealItalian(ArabianDishs[4], 'Makmura.jpg', Arabian5);
+var ArabianDish1 = new MealArabian(ArabianDishs[0], '3_Mansaf-National-Dish.jpg', Arabian1);
+var ArabianDish2 = new MealArabian(ArabianDishs[1], 'maqloba.jpg', Arabian2);
+var ArabianDish3 = new MealArabian(ArabianDishs[2], 'Musakhan-Sumac-Chicken-Recipe-7.jpg', Arabian3);
+var ArabianDish4 = new MealArabian(ArabianDishs[3], 'Falafel-Recipe-20.jpg', Arabian4);
+var ArabianDish5 = new MealArabian(ArabianDishs[4], 'Makmura.jpg', Arabian5);
 
-function popUp() {
-
+var secArbain=document.getElementById('arabian');
+var pop2=0;
+function popUp2() {
+    if (pop2==0){
     for (var i = 0; i < mealsArabian.length; i++) {
-        mealsArabian[i].render();
+        mealsArabian[i].render2();
     }
+    pop2=1;
+}
+  
+
 }
 console.log(mealsArabian);
 
