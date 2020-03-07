@@ -107,7 +107,7 @@ var counter = 0;
 MealIndian.prototype.render = function () {
 
     this.randomPrice();
-    var myMenu = document.getElementById('indianDish');
+    var myMenu = document.getElementById('indianFood');
     var ul1 = document.createElement('ul');
     myMenu.appendChild(ul1);
 
