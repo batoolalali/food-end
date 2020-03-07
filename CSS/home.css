@@ -38,6 +38,7 @@ header nav ul li a{
     font-size: 35px;
     text-decoration: blink;
     letter-spacing:10px;
+    font-family: sans-serif;
 }
 header div{
     height: 50%;
