@@ -12,7 +12,7 @@ var extraToItalian = [' Drink', ' Potato', ' Agliata Sauce']
 function MealItalian(dish, imgPath, ingredients) {
     this.dish = dish;
     this.price;
-    this.imgPath = `../IMG/${imgPath}`;
+    this.imgPath = `IMG/${imgPath}`;
     this.ingredients = ingredients;
     // this.extraPrice;
     mealsItalian.push(this);
@@ -101,7 +101,7 @@ function MealIndian(dish, imgPath, ingredients) {
 
     this.dish = dish;
     this.price;
-    this.imgPath = `../IMG/${imgPath}`;
+    this.imgPath = `IMG/${imgPath}`;
     this.ingredients = ingredients;
     // this.extraPrice;
     mealsIndian.push(this);
@@ -188,7 +188,7 @@ var extraToArabian = [' Drink', ' Yogurt', ' Arabian Salad']
 function MealArabian(dish, imgPath, ingredients) {
     this.dish = dish;
     this.price;
-    this.imgPath = `../IMG/${imgPath}`;
+    this.imgPath = `IMG/${imgPath}`;
     this.ingredients = ingredients;
     // this.extraPrice;
     mealsArabian.push(this);
