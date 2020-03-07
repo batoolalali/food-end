@@ -1,4 +1,7 @@
 /* This is header */
+body{
+    background-image: url('/newIMG/background1.jpg'); 
+}
 header{
     font-family: 'Anton', sans-serif;
     width: 100%;
@@ -82,3 +85,321 @@ footer p{
     color: cornsilk;
    
 }
+
+@-moz-keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
+
+@-webkit-keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
+
+@-o-keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
+
+
+.firstButton , .seconButton , .thirdButton{
+    margin-left: 600px;
+}
+
+.firstButton span , .seconButton span, .thirdButton span{
+    background-color: #E8E8E8;
+    background-image: 
+        /* gloss gradient */
+        -webkit-gradient(
+            linear, 
+            left bottom, 
+            left top, 
+            color-stop(50%,rgba(255,255,255,0)), 
+            color-stop(50%,rgba(255,255,255,0.3)), 
+            color-stop(100%,rgba(255,255,255,0.2))),
+        
+        /* dark outside gradient */
+        -webkit-gradient(
+            linear, 
+            left top, 
+            right top, 
+            color-stop(0%,rgba(210,210,210,0.3)), 
+            color-stop(20%,rgba(210,210,210,0)), 
+            color-stop(80%,rgba(210,210,210,0)), 
+            color-stop(100%,rgba(210,210,210,0.3))),
+        
+        /* light inner gradient */
+        -webkit-gradient(
+            linear, 
+            left top, 
+            right top, 
+            color-stop(0%,rgba(255,255,255,0)), 
+            color-stop(20%,rgba(255,255,255,0.5)), 
+            color-stop(80%,rgba(255,255,255,0.5)), 
+            color-stop(100%,rgba(255,255,255,0))),        
+        
+        /* diagonal line pattern */
+        -webkit-gradient(
+            linear, 
+            0% 100%, 
+            100% 0%, 
+            color-stop(0%,rgba(255,255,255,0)), 
+            color-stop(40%,rgba(255,255,255,0)), 
+            color-stop(40%,#D2D2D1), 
+            color-stop(60%,#D2D2D1), 
+            color-stop(60%,rgba(255,255,255,0)), 
+            color-stop(100%,rgba(255,255,255,0)));
+        -webkit-box-shadow:
+            0px -1px #fff, /* top highlight */
+            0px 1px 1px #FFFFFF; /* bottom edge */
+    -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+    -webkit-border-radius: 10px;
+    -webkit-transition: -webkit-transform .1s ease-in-out;
+    display: inline-block;
+    padding: 10px 20px 20px 10px;
+    color: #3A474D;
+    text-transform: uppercase;
+    font-family: 'TradeGothicLTStd-BdCn20','PT Sans Narrow';
+    font-weight: 700;
+    font-size: 32px;
+    text-shadow: 0px 1px #fff, 0px -1px #262F33;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-image: url("https://c8.alamy.com/comp/EPWMJ5/illustration-of-green-plus-icon-on-white-background-EPWMJ5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid green;
+    
+    
+}
+.firstButton span:hover , .seconButton span:hover , .thirdButton span:hover {
+            color: #AEBF3B;
+            text-shadow: 0px -1px #97A63A;
+            cursor: pointer;
+            
+}
+
+.firstButton:active , .seconButton:active , .thirdButton:active {
+    -webkit-box-shadow: 
+        0px 3px rgba(128,128,128,1),
+        0px 4px rgba(118,118,118,1),
+        0px 5px rgba(108,108,108,1),
+        0px 6px rgba(98,98,98,1),
+        0px 7px rgba(88,88,88,1),
+        0px 8px rgba(78,78,78,1),
+        0px 10px 2px 0px rgba(128,128,128,.6); /* shadow */
+        
+}
+.firstButton:active span , .seconButton:active span , .thirdButton:active span{
+    -webkit-transform: translate(0, 5px); /* depth of button press */
+    
+}
+
+.firstButton span:after , .seconButton span:after , .thirdButton span:after {
+    display: block;
+    width: 10px;
+    height: 10px;
+    right: 40px;
+    top: 15px;    
+    font-family: 'Cabin';
+    font-weight: 700;
+    color: #AEBF3B;
+    text-shadow: 0px 1px #fff, 0px -1px #97A63A;
+    font-size: 26px;
+    
+}
+
+
+section h2 {
+    color:red;
+    font-family: 'Faster One', cursive;
+    font-size: 50px;
+    font-weight: 100;
+    text-align: center;
+    border: 5px solid red;
+    width: 500px;
+    border-radius: 30%;
+    margin-left: 390px;
+    background-color: darkred;
+
+}
+
+#italianDish , #arabianDish , #indianDish{
+    background-image: url('https://zawles.com/wp-content/uploads/2016/04/hd-wallpapers-design-home-page-wallpaper-professional-website-backgrounds-background.jpg');
+    background-size: cover;
+    width: auto;
+    height: 1600px;
+    text-align: left;
+    font-family: 'Sniglet', cursive;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 2.5;
+    word-spacing: 2px;
+    text-shadow: 3px 3px green;
+}
+
+section img{
+    width: 150px;
+    height: 150px;
+    margin-top: 25px;
+    border: 5px solid white;
+    border-radius: 50%;
+
+}
+
+section img:hover{
+    border: 5px solid green;
+    opacity:1;
+        animation: move 5s infinite;
+}
+
+@keyframes move{
+    0%{border-radius: 50%;}
+    25%{border-radius: 40%;}
+    50%{border-radius: 30%;}
+    75%{border-radius: 40%;}
+    100%{border-radius: 50%;}
+    }
+
+#italianDish button, #arabianDish button , #indianDish button{
+    background-color: green;
+    border:4px solid darkgreen;
+    margin-left: 20px;
+    font-size: large;
+    border-radius: 15%;
+    font-family: 'Sniglet', cursive;
+    opacity: 0.6;
+}
+
+@keyframes move1{
+    0%{opacity: 0.2;}
+    25%{opacity: 0.4;}
+    50%{opacity: 0.6;}
+    75%{opacity: 0.8;}
+    100%{opacity: 1;}
+    }
+
+#italianDish button:hover , #arabianDish button:hover , #indianDish button:hover{
+    opacity: 1;
+    animation: move1 2s infinite;
+}
+
+section button {
+    background-color: darkgreen;
+    border: 2px solid green;
+    border-radius: 50%;
+}
+
+#uniqLogo{
+
+width:220px; height:200px; margin:5% auto; background: rgb(255,214,94); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(255,214,94,1) 0%, rgba(254,191,4,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,214,94,1)), color-stop(100%,rgba(254,191,4,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd65e', endColorstr='#febf04',GradientType=0 );
+margin-left: 1070px;
+position: fixed;
+margin-top: -43px;
+}
+
+.ribbon-wrapper {
+	position: relative;z-index:998;
+}
+  .ribbon-front {
+	background-color: #cc3333;	height: 50px;
+	width: 240px;
+	position: relative;
+	left:-10px;
+	z-index: 2; font:20px/50px bold Verdana, Geneva, sans-serif; color:#f8f8f8; text-align:center;text-shadow: 0px 1px 2px #cc6666;
+}
+
+  .ribbon-front,
+  .ribbon-back-left,
+  .ribbon-back-right
+{
+	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+}
+
+  .ribbon-edge-topleft,
+  .ribbon-edge-topright,
+  .ribbon-edge-bottomleft,
+  .ribbon-edge-bottomright {
+	position: absolute;
+	z-index: 1;
+	border-style:solid;
+	height:0px;
+	width:0px;
+}
+
+  .ribbon-edge-topleft,
+  .ribbon-edge-topright {
+}
+
+  .ribbon-edge-bottomleft,
+  .ribbon-edge-bottomright {
+	top: 50px;
+}
+
+  .ribbon-edge-topleft,
+  .ribbon-edge-bottomleft {
+	left: -10px;
+	border-color: transparent #9B1724 transparent transparent;
+}
+
+  .ribbon-edge-topleft {
+	top: -5px;
+	border-width: 5px 10px 0 0;
+}
+  .ribbon-edge-bottomleft {
+	border-width: 0 10px 0px 0;
+}
+
+  .ribbon-edge-topright,
+  .ribbon-edge-bottomright {
+	left: 220px;
+	border-color: transparent transparent transparent #9B1724;
+}
+
+  .ribbon-edge-topright {
+	top: 0px;
+	border-width: 0px 0 0 10px;
+}
+  .ribbon-edge-bottomright {
+	border-width: 0 0 5px 10px;
+}
+
+
+@-webkit-keyframes flow {
+	0% { left:-20px;opacity: 0;}
+	50% {left:100px;opacity: 0.3;}
+    100%{ left:180px;opacity: 0;}
+}
+@keyframes flow {
+	0% { left:-20px;opacity: 0;}
+	50% {left:100px;opacity: 0.3;}
+    100%{ left:180px;opacity: 0;}
+}
+
+.glow{ background: rgb(255,255,255); width:40px; height:100%; z-index:999; position:absolute;-webkit-animation: flow 1.5s linear infinite;-moz-animation: flow 1.5s linear infinite;-webkit-transform: skew(20deg);
+	   -moz-transform: skew(20deg);
+	     -o-transform: skew(20deg);background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(1%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* IE10+ */
+background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */ border-left:1px solid #fff;}
+
+
