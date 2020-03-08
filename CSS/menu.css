@@ -116,49 +116,51 @@ main{
 
 
  
+#italianDish  span{
+    margin-right: 150px;
+    margin-left: 0;
+}
+#indianDish  span{
+    margin-right: 500px;
+    margin-left: -32%;
+}
+        #arabianDish  span{
+            margin-right: 481px;
+            margin-left: -34%
+        }
 
 #italianDish img{
     margin-right: 150px;
-    margin-left:-1%;
-   margin-bottom: 5%;
+    margin-left:10%;
+   margin-bottom: 1%;
 }
 
-#italianDish  span{
-    margin-right: 150px;
-    margin-left:10%;
-}
-#indianDish  span{
-    margin-right: 150px;
-    margin-left:-38%;
-}
 
 #indianDish img{
     margin-right: 150px;
-    margin-left:8%;
+    margin-left:10%;
    margin-bottom: 5%;
-}
-#arabianDish  span{
-    margin-right: 150px;
-    margin-left:-38%;
 }
 
 #arabianDish img{
     margin-right: 150px;
-    margin-left:8%;
+    margin-left:10%;
    margin-bottom: 5%;
 } 
-
+ 
 
 
 
 #italianDish ,#indianDish ,#arabianDish {
 
-margin-left:100px ;
+margin-left:px ;
 }
 
 
 
-
+img{
+    margin: 90px;
+}
 
 
 section img{
