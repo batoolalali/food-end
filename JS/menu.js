@@ -179,14 +179,15 @@ MealIndian.prototype.randomPrice = function () {
 // var counter1 = 0;
 var formCounter1=0;
 
-var myMenu1 = document.getElementById('indianDish');
-var ul2 = document.createElement('ul');
-myMenu1.appendChild(ul2);
+
 
 MealIndian.prototype.render1 = function () {
 
     this.randomPrice();
-   
+var myMenu1 = document.getElementById('indianDish');
+var ul2 = document.createElement('ul');
+myMenu1.appendChild(ul2);
+
     console.log('in Indian render');
 
     var li1 = document.createElement('li');
@@ -194,7 +195,7 @@ MealIndian.prototype.render1 = function () {
     li1.textContent = `${this.dish} `;
     // for (var i=0; i<)
     var myImg = document.createElement('img');
-    li1.appendChild(myImg);
+    myMenu1.appendChild(myImg);
     myImg.setAttribute('src', this.imgPath);
     myImg.setAttribute('alt', "img");
 
@@ -313,9 +314,9 @@ MealArabian.prototype.randomPrice = function () {
 }
 var counter = 0;
 var formCounter2=0;
-var myMenu3 = document.getElementById('arabianDish');
-    var ul3 = document.createElement('ul');
-    myMenu3.appendChild(ul3);
+// var myMenu3 = document.getElementById('arabianDish');
+//     var ul3 = document.createElement('ul');
+//     myMenu3.appendChild(ul3);
 MealArabian.prototype.render2 = function () {
 
     this.randomPrice();
@@ -328,7 +329,7 @@ MealArabian.prototype.render2 = function () {
     li1.textContent = `${this.dish} `;
     // for (var i=0; i<)
     var myImg = document.createElement('img');
-    li1.appendChild(myImg);
+    myMenu3.appendChild(myImg);
     myImg.setAttribute('src', this.imgPath);
     myImg.setAttribute('alt', "img");
 
