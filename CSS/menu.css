@@ -1,22 +1,45 @@
 /* This is header */
-body{
-    background-image: url('/newIMG/background1.jpg'); 
-}
 header{
     font-family: 'Anton', sans-serif;
     width: 100%;
-    height: 100px;
-    background-color: #272121;
-    margin-top: -30px;
-
+    height: 100%;
+    background-color: #635b5b21;
+    margin: 0 auto;
+    /* margin-bottom:20px; */
+    /* position: fixed; */
+    z-index: 6;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    transition-property: background-color,box-shadow,transform;
+    background:  url("https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/images/header-background.png") 0 0 repeat-x
+}
+ #linkLogo{
+    display:grid;
+    text-decoration: none;
+    width: 6px;
+    margin-top:0.5%;
+    margin-left: 6%;
+}
+#logo{
+    margin-top: -5px;
+    margin-left: 50px;
 }
 header h1{
-    font-size: 60px;
-    color: #ff0000;
-    margin-left: 60px;
-    
-    margin-top: 30px;
+    font-size: 275%;
+    color: rgb(255, 9, 9);
+    margin-left: 6%;
+    letter-spacing:5px;
+    margin-top:0.5%;
+ 
 }
+header h1:hover{
+    /* font-size: 280%; */
+    text-shadow: 2px 2px rgba(240, 234, 234, 0.849);
+
+}
+
 header img{
    
     margin-top: 25px;
@@ -26,20 +49,33 @@ header img{
 header nav ul{
     
      margin-top: -110px;
-     margin-left: 430px;
+     margin-left: 400px;
      
 }
 header nav ul li{
     display:inline-block;
     list-style-type: none;
- 
-     margin-left: 60px;
+    margin-top: 3.5%;
+     margin-left: 5%;
+     
 }
 header nav ul li a{
     margin-right: 30px;
     color: cornsilk;
-    font-size: 35px;
+    font-size: 30px;
     text-decoration: blink;
+    letter-spacing:10px;
+    font-family: sans-serif;
+    display: inline;
+}
+header nav ul li a:hover{
+    
+    color:cornsilk ;
+    background:text #ff0000 ;
+    background-color: #ff0000;
+    box-shadow: 0 0 9px #ff0000, 0 0 35px #ff0000, 0 0 75px #ff0000;
+    transition-delay: 0.1s;
+
 }
 header div{
     height: 50%;
@@ -47,214 +83,95 @@ header div{
 header div img{
     width: 100%;
     position: relative;
-   
+    
 }
 
 
 /* This is main */
-
-li {
-    font-size: x-large;
+main{
+    font-family: 'Saira Condensed', sans-serif;
 }
-
-li span{
-    font-size: 25px;
-}
-
-
-label{
-    font-size: 20px;
-}
-
-li img {
-    width: 50px;
-    height: 50px;
-}
-
-/* This is footer */
-footer{
-    font-family: 'Anton', sans-serif;
+.main-img{
     width: 100%;
-    height: 100px;
-    background-color: #272121;
-    margin-top: 30px;
-    text-align: center;
-
-}
-footer p{
-    color: cornsilk;
    
-}
+      height: 200px;
+   
 
-@-moz-keyframes rotate {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(-360deg);}
+    object-fit: contain;
+     background: url(background.png) no-repeat ;
+     background-size: 1333px ;
+     
+     
+    animation: slide1 60s infinite;
 }
-
-@-webkit-keyframes rotate {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(-360deg);}
-}
-
-@-o-keyframes rotate {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(-360deg);}
-}
-
-@keyframes rotate {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(-360deg);}
+@keyframes slide1 {
+    0%{background-position: 0 0%;}
+    25%{background-position: 0 100%;}
+    100%{background-position: 0 0%;}
 }
 
 
-.firstButton , .seconButton , .thirdButton{
-    margin-left: 600px;
+
+/* ////////////////////////////////////////////////////// DONE */
+
+
+ 
+
+#italianDish img{
+    margin-right: 150px;
+    margin-left:-1%;
+   margin-bottom: 5%;
 }
 
-.firstButton span , .seconButton span, .thirdButton span{
-    background-color: #E8E8E8;
-    background-image: 
-        /* gloss gradient */
-        -webkit-gradient(
-            linear, 
-            left bottom, 
-            left top, 
-            color-stop(50%,rgba(255,255,255,0)), 
-            color-stop(50%,rgba(255,255,255,0.3)), 
-            color-stop(100%,rgba(255,255,255,0.2))),
-        
-        /* dark outside gradient */
-        -webkit-gradient(
-            linear, 
-            left top, 
-            right top, 
-            color-stop(0%,rgba(210,210,210,0.3)), 
-            color-stop(20%,rgba(210,210,210,0)), 
-            color-stop(80%,rgba(210,210,210,0)), 
-            color-stop(100%,rgba(210,210,210,0.3))),
-        
-        /* light inner gradient */
-        -webkit-gradient(
-            linear, 
-            left top, 
-            right top, 
-            color-stop(0%,rgba(255,255,255,0)), 
-            color-stop(20%,rgba(255,255,255,0.5)), 
-            color-stop(80%,rgba(255,255,255,0.5)), 
-            color-stop(100%,rgba(255,255,255,0))),        
-        
-        /* diagonal line pattern */
-        -webkit-gradient(
-            linear, 
-            0% 100%, 
-            100% 0%, 
-            color-stop(0%,rgba(255,255,255,0)), 
-            color-stop(40%,rgba(255,255,255,0)), 
-            color-stop(40%,#D2D2D1), 
-            color-stop(60%,#D2D2D1), 
-            color-stop(60%,rgba(255,255,255,0)), 
-            color-stop(100%,rgba(255,255,255,0)));
-        -webkit-box-shadow:
-            0px -1px #fff, /* top highlight */
-            0px 1px 1px #FFFFFF; /* bottom edge */
-    -webkit-background-size: 100%, 100%, 100%, 4px 4px;
-    -webkit-border-radius: 10px;
-    -webkit-transition: -webkit-transform .1s ease-in-out;
-    display: inline-block;
-    padding: 10px 20px 20px 10px;
-    color: #3A474D;
-    text-transform: uppercase;
-    font-family: 'TradeGothicLTStd-BdCn20','PT Sans Narrow';
-    font-weight: 700;
-    font-size: 32px;
-    text-shadow: 0px 1px #fff, 0px -1px #262F33;
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background-image: url("https://c8.alamy.com/comp/EPWMJ5/illustration-of-green-plus-icon-on-white-background-EPWMJ5.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 2px solid green;
-    
-    
+#italianDish  span{
+    margin-right: 150px;
+    margin-left:10%;
 }
-.firstButton span:hover , .seconButton span:hover , .thirdButton span:hover {
-            color: #AEBF3B;
-            text-shadow: 0px -1px #97A63A;
-            cursor: pointer;
-            
+#indianDish  span{
+    margin-right: 150px;
+    margin-left:-38%;
 }
 
-.firstButton:active , .seconButton:active , .thirdButton:active {
-    -webkit-box-shadow: 
-        0px 3px rgba(128,128,128,1),
-        0px 4px rgba(118,118,118,1),
-        0px 5px rgba(108,108,108,1),
-        0px 6px rgba(98,98,98,1),
-        0px 7px rgba(88,88,88,1),
-        0px 8px rgba(78,78,78,1),
-        0px 10px 2px 0px rgba(128,128,128,.6); /* shadow */
-        
+#indianDish img{
+    margin-right: 150px;
+    margin-left:8%;
+   margin-bottom: 5%;
 }
-.firstButton:active span , .seconButton:active span , .thirdButton:active span{
-    -webkit-transform: translate(0, 5px); /* depth of button press */
-    
+#arabianDish  span{
+    margin-right: 150px;
+    margin-left:-38%;
 }
 
-.firstButton span:after , .seconButton span:after , .thirdButton span:after {
-    display: block;
-    width: 10px;
-    height: 10px;
-    right: 40px;
-    top: 15px;    
-    font-family: 'Cabin';
-    font-weight: 700;
-    color: #AEBF3B;
-    text-shadow: 0px 1px #fff, 0px -1px #97A63A;
-    font-size: 26px;
-    
+#arabianDish img{
+    margin-right: 150px;
+    margin-left:8%;
+   margin-bottom: 5%;
+} 
+
+
+
+
+#italianDish ,#indianDish ,#arabianDish {
+
+margin-left:100px ;
 }
 
 
-section h2 {
-    color:red;
-    font-family: 'Faster One', cursive;
-    font-size: 50px;
-    font-weight: 100;
-    text-align: center;
-    border: 5px solid red;
-    width: 500px;
-    border-radius: 30%;
-    margin-left: 390px;
-    background-color: darkred;
 
-}
 
-#italianDish , #arabianDish , #indianDish{
-    background-image: url('/newIMG/background2.jpg');
-    background-size: cover;
-    width: auto;
-    height: 1600px;
-    text-align: left;
-    font-family: 'Sniglet', cursive;
-    font-weight: bold;
-    letter-spacing: 2px;
-    line-height: 2.5;
-    word-spacing: 2px;
-    text-shadow: 3px 3px green;
-}
+
 
 section img{
     width: 150px;
     height: 150px;
     margin-top: 25px;
-    border: 5px solid white;
+    border: 3px solid white;
     border-radius: 50%;
 
 }
 
 section img:hover{
-    border: 5px solid green;
+    border: 3px solid rgb(255, 0, 0);
     opacity:1;
         animation: move 5s infinite;
 }
@@ -266,63 +183,54 @@ section img:hover{
     75%{border-radius: 40%;}
     100%{border-radius: 50%;}
     }
-
-#italianDish button, #arabianDish button , #indianDish button{
-    background-color: green;
-    border:4px solid darkgreen;
-    margin-left: 20px;
-    font-size: large;
-    border-radius: 15%;
-    font-family: 'Sniglet', cursive;
-    opacity: 0.6;
+#italian{
+    font-size: x-large;
+    color: #ff0000;
+    background-color: rgba(173, 152, 152, 0.445);
 }
-
-@keyframes move1{
-    0%{opacity: 0.2;}
-    25%{opacity: 0.4;}
-    50%{opacity: 0.6;}
-    75%{opacity: 0.8;}
-    100%{opacity: 1;}
-    }
-
-#italianDish button:hover , #arabianDish button:hover , #indianDish button:hover{
-    opacity: 1;
-    animation: move1 2s infinite;
+#arabian{
+    font-size: x-large;
+    color: #ff0000;
+    background-color: rgba(173, 152, 152, 0.445);
+}
+#indian{
+    font-size: x-large;
+    color: #ff0000;
+    background-color: rgba(173, 152, 152, 0.445);
 }
 
 section button {
-    background-color: darkgreen;
-    border: 2px solid green;
-    border-radius: 50%;
+    background-color: rgba(231, 40, 56, 0.87);
+    border: 2px solid rgba(224, 20, 98, 0.781);
+    border-radius: 15%;
+    margin-left: 50px;
 }
+
+
 
 #uniqLogo{
 
-width:220px; height:200px; margin:5% auto; background: rgb(255,214,94); /* Old browsers */
-background: -moz-linear-gradient(top, rgba(255,214,94,1) 0%, rgba(254,191,4,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,214,94,1)), color-stop(100%,rgba(254,191,4,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd65e', endColorstr='#febf04',GradientType=0 );
-margin-left: 1070px;
-position: fixed;
-margin-top: -43px;
-}
-
-.ribbon-wrapper {
+    /* width:220px; height:200px; margin:5% auto; background: rgb(114, 114, 114);  */
+   
+    background: -webkit-linear-gradient(top, rgb(170, 165, 165) 0%,rgba(255, 6, 6, 0.788) 35%,rgb(170, 165, 165) 70% ,rgba(255, 6, 6, 0.788) 65%,rgb(170, 165, 165) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd65e', endColorstr='#febf04'   );
+    margin-left: 1070px;
+    position: fixed;
+    margin-top: -100px;
+    }
+    
+/* .ribbon-wrapper {
 	position: relative;z-index:998;
-}
+} */
   .ribbon-front {
 	background-color: #cc3333;	height: 50px;
 	width: 240px;
 	position: relative;
-	left:-10px;
+	left:1px;
 	z-index: 2; font:20px/50px bold Verdana, Geneva, sans-serif; color:#f8f8f8; text-align:center;text-shadow: 0px 1px 2px #cc6666;
 }
 
-  .ribbon-front,
+  /* .ribbon-front,
   .ribbon-back-left,
   .ribbon-back-right
 {
@@ -330,9 +238,9 @@ margin-top: -43px;
 	-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
 	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
 	-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
-}
+} */
 
-  .ribbon-edge-topleft,
+  /* .ribbon-edge-topleft,
   .ribbon-edge-topright,
   .ribbon-edge-bottomleft,
   .ribbon-edge-bottomright {
@@ -341,65 +249,105 @@ margin-top: -43px;
 	border-style:solid;
 	height:0px;
 	width:0px;
-}
+} */
 
-  .ribbon-edge-topleft,
+  /* .ribbon-edge-topleft,
   .ribbon-edge-topright {
-}
+} */
 
-  .ribbon-edge-bottomleft,
+  /* .ribbon-edge-bottomleft,
   .ribbon-edge-bottomright {
 	top: 50px;
-}
+} */
 
-  .ribbon-edge-topleft,
+  /* .ribbon-edge-topleft,
   .ribbon-edge-bottomleft {
 	left: -10px;
 	border-color: transparent #9B1724 transparent transparent;
-}
+} */
 
-  .ribbon-edge-topleft {
+  /* .ribbon-edge-topleft {
 	top: -5px;
 	border-width: 5px 10px 0 0;
-}
-  .ribbon-edge-bottomleft {
+} */
+  /* .ribbon-edge-bottomleft {
 	border-width: 0 10px 0px 0;
-}
+} */
 
-  .ribbon-edge-topright,
+  /* .ribbon-edge-topright,
   .ribbon-edge-bottomright {
 	left: 220px;
 	border-color: transparent transparent transparent #9B1724;
-}
+} */
 
-  .ribbon-edge-topright {
+  /* .ribbon-edge-topright {
 	top: 0px;
 	border-width: 0px 0 0 10px;
-}
-  .ribbon-edge-bottomright {
+} */
+  /* .ribbon-edge-bottomright {
 	border-width: 0 0 5px 10px;
-}
+} */
 
 
 @-webkit-keyframes flow {
-	0% { left:-20px;opacity: 0;}
-	50% {left:100px;opacity: 0.3;}
-    100%{ left:180px;opacity: 0;}
+	/* 0% { left:-20px;opacity: 0;} */
+	/* 50% {left:100px;opacity: 0.3;} */
+    /* 100%{ left:180px;opacity: 0;} */
 }
 @keyframes flow {
-	0% { left:-20px;opacity: 0;}
-	50% {left:100px;opacity: 0.3;}
-    100%{ left:180px;opacity: 0;}
+	/* 0% { left:-20px;opacity: 0;} */
+	/* 50% {left:100px;opacity: 0.3;} */
+    /* 100%{ left:180px;opacity: 0;} */
+} 
+
+
+
+.firstButton , .seconButton , .thirdButton{
+    margin-left: 600px;
+    background-color: rgb(75, 75, 75);
 }
 
-.glow{ background: rgb(255,255,255); width:40px; height:100%; z-index:999; position:absolute;-webkit-animation: flow 1.5s linear infinite;-moz-animation: flow 1.5s linear infinite;-webkit-transform: skew(20deg);
-	   -moz-transform: skew(20deg);
-	     -o-transform: skew(20deg);background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(1%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* IE10+ */
-background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */ border-left:1px solid #fff;}
+.firstButton span , .seconButton span, .thirdButton span{
+      
+    display: inline-block;
+    padding: 10px 20px 20px 10px;
+   
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-image: url("https://c8.alamy.com/comp/EPWMJ5/illustration-of-green-plus-icon-on-white-background-EPWMJ5.jpg");
+    
+    background-size: cover;
+    
+    
+    
+}
 
 
+
+.firstButton:active span , .seconButton:active span , .thirdButton:active span{
+    -webkit-transform: translate(0, 5px); 
+    
+}
+
+
+
+/* ///////////////////////////////// DONE  */
+/* This is footer */
+footer{
+    font-family: 'Anton', sans-serif;
+    width: 25%;
+    margin: 0 auto;
+    height: 600%;
+    background-color: #27212170;
+    margin-top: 30px;
+    text-align: center;
+}
+   
+#p{
+    color: cornsilk;
+    margin-top: 40px;
+    padding: 5%;
+    letter-spacing: 2px;
+   
+}
