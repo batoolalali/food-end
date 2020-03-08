@@ -21,7 +21,8 @@ MealItalian.prototype.randomPrice = function () {
 
     this.price = Math.floor(Math.random() * (12 - 5 + 1) + 5);
 }
-var c=0;
+var c=mealsItalian.length;
+console.log(c);
 
 var counter = 0;
 var inputCounter=0;
@@ -67,48 +68,57 @@ MealItalian.prototype.render = function () {
         console.log(this.imgPath, 'hi');
 
     }
-  console.log('obj',mealsItalian);
-console.log('counter : '+counter);
-    var addOrder= document.createElement('input');
-    addOrder.setAttribute('id', `add${inputCounter}`);
-    addOrder.setAttribute('type', 'submit');
-    myform.appendChild(addOrder);
-    inputCounter++;
+ 
+    
+   
    
     var theForm = document.getElementById(`form${formCounter}`);
-    console.log('here'+theForm);
+    // console.log('here'+theForm);
     theForm.addEventListener('submit', function(event){
         event.preventDefault();
-        // for(var i=0;i<mealsItalian.length;i++){
-            for(var j=0 ;j<3;j++){
+         for(var i=0;i<mealsItalian.length;i++){
+            for(var j=(i*3) ;j<(i*3+3);j++){
                 var checked1 = document.getElementById(`extraToItalian${j}`).checked;
-                console.log(checked1);
-               
+                // console.log('id', `extraToItalian${j}`);
+                // console.log(checked1);
+                // console.log(i,"i");
+                // console.log(j,"j");
+                // console.log( mealsItalian[i].price ,'Price');
+
                 if(checked1 == true){
-                    console.log( mealsItalian[0].price);
-                    mealsItalian[0].price =mealsItalian[0].price + 2;
-                    console.log('hi ');
-                    console.log( mealsItalian[0].price ,'Price');
-                    console.log( mealsItalian[0].extraPrice ,'extraPrice');
+                    
+                    // console.log( mealsItalian[c].price);
+                    mealsItalian[i].price =mealsItalian[i].price + 2;
+                   
+                   
                    
                 }
-            }
+                // console.log("the j", j);
+            }             //   c++; 
+
+        }
              
+console.log(mealsItalian[0].price, "price");
+console.log(mealsItalian[0].dish);
+console.log(mealsItalian[1].price, "price");
+console.log(mealsItalian[1].dish);
+console.log(mealsItalian[2].price, "price");
+console.log(mealsItalian[2].dish);
+console.log(mealsItalian[3].price, "price");
+console.log(mealsItalian[3].dish);
+console.log(mealsItalian[4].price, "price");
+console.log(mealsItalian[4].dish);
     
-    
-        // }
-    });
+   });
 
-c++;
 formCounter++;
-
     // addOrder.textContent="Add to Order";
     // addOrder.setAttribute('onclick', 'addExtraPrice()');
     console.log(this.ingredients);
     // console.log('price : '+ price);
     // console.log('extra price : '+extraPrice);
-}
 
+}
 
 
 
@@ -131,8 +141,15 @@ function popUp() {
     if (pop==0){
     for (var i = 0; i < mealsItalian.length; i++) {
         mealsItalian[i].render();
+        
     }
 pop++;}
+var addOrder= document.createElement('input');
+    addOrder.setAttribute('id', `add${inputCounter}`);
+    addOrder.setAttribute('type', 'submit');
+    var myform =document.getElementById("form4");
+    myform.appendChild(addOrder);
+    inputCounter++;
 }
 console.log(mealsItalian);
 	
@@ -160,6 +177,7 @@ MealIndian.prototype.randomPrice = function () {
     this.price = Math.floor(Math.random() * (12 - 5 + 1) + 5);
 }
 // var counter1 = 0;
+var formCounter1=0;
 
 var myMenu1 = document.getElementById('indianDish');
 var ul2 = document.createElement('ul');
@@ -189,8 +207,8 @@ MealIndian.prototype.render1 = function () {
     span2.textContent = `  ${this.price} $`;
 
     var myform = document.createElement('form');
-    myform.setAttribute('id', `form${formCounter}`);
-    formCounter++;
+    myform.setAttribute('id', `formi${formCounter1}`);
+    // formCounter1++;
     li1.appendChild(myform);
 
     for (var i = 0; i < extraTOIndian.length; i++) {
@@ -205,14 +223,48 @@ MealIndian.prototype.render1 = function () {
         counter++;
         console.log(this.imgPath, 'hi');
     }
-    var addOrder= document.createElement('input');
-    addOrder.setAttribute('id', `add${inputCounter}`);
-    addOrder.setAttribute('type', 'submit');
-    myform.appendChild(addOrder);
-    inputCounter++;
-    // addOrder.textContent="Add to Order";
-    // addOrder.setAttribute('onclick', 'addExtraPrice()');
-    console.log(this.ingredients);
+
+    var theForm = document.getElementById(`formi${formCounter1}`);
+    console.log('here',`formi${formCounter1}`);
+    theForm.addEventListener('submit', function(event){
+        event.preventDefault();
+         for(var i=0;i<mealsIndian.length;i++){
+            for(var j=(i*3) ;j<(i*3+3);j++){
+                var checked1 = document.getElementById(`extraTOIndian${j}`).checked;
+                // console.log('id', `extraToItalian${j}`);
+                // console.log(checked1);
+                // console.log(i,"i");
+                // console.log(j,"j");
+                // console.log( mealsItalian[i].price ,'Price');
+
+                if(checked1 == true){
+                    
+                    // console.log( mealsItalian[c].price);
+                    mealsIndian[i].price =mealsIndian[i].price + 2;
+                   
+                   
+                   
+                }
+                // console.log("the j", j);
+            }             //   c++; 
+
+        }
+             
+console.log(mealsIndian[0].price, "price");
+console.log(mealsIndian[0].dish);
+console.log(mealsIndian[1].price, "price");
+console.log(mealsIndian[1].dish);
+console.log(mealsIndian[2].price, "price");
+console.log(mealsIndian[2].dish);
+console.log(mealsIndian[3].price, "price");
+console.log(mealsIndian[3].dish);
+console.log(mealsIndian[4].price, "price");
+console.log(mealsIndian[4].dish);
+    
+   });
+
+formCounter1++;
+    
 }
 
 var indianDish1 = new MealIndian(indianDishs[0], 'biryani.jpg', indian1);
@@ -227,6 +279,13 @@ function popUp1() {
         mealsIndian[i].render1();
     }
         pop1++;}
+        var addOrder= document.createElement('input');
+        addOrder.setAttribute('id', `add${inputCounter}`);
+        addOrder.setAttribute('type', 'submit');
+        var myform =document.getElementById("formi4");
+        myform.appendChild(addOrder);
+        inputCounter++;
+
 }
 console.log(mealsIndian);
 
@@ -253,7 +312,7 @@ MealArabian.prototype.randomPrice = function () {
     this.price = Math.floor(Math.random() * (12 - 5 + 1) + 5);
 }
 var counter = 0;
-
+var formCounter2=0;
 var myMenu3 = document.getElementById('arabianDish');
     var ul3 = document.createElement('ul');
     myMenu3.appendChild(ul3);
@@ -282,8 +341,7 @@ MealArabian.prototype.render2 = function () {
     span2.textContent = `  ${this.price} $`;
 
     var myform = document.createElement('form');
-    myform.setAttribute('id', `form${formCounter}`);
-    formCounter++;
+    myform.setAttribute('id', `forma${formCounter2}`);
     li1.appendChild(myform);
 
     for (var i = 0; i < extraToArabian.length; i++) {
@@ -298,14 +356,54 @@ MealArabian.prototype.render2 = function () {
         counter++;
         console.log(this.imgPath, 'hi');
     }
-    var addOrder= document.createElement('input');
-    addOrder.setAttribute('id', `add${inputCounter}`);
-    addOrder.setAttribute('type', 'submit');
-    myform.appendChild(addOrder);
-    inputCounter++;
-    // addOrder.textContent="Add to Order";
-    // addOrder.setAttribute('onclick', 'addExtraPrice()');
+    // var addOrder= document.createElement('input');
+    // addOrder.setAttribute('id', `add${inputCounter}`);
+    // addOrder.setAttribute('type', 'submit');
+    // myform.appendChild(addOrder);
+    // inputCounter++;
+    // // addOrder.textContent="Add to Order";
+    // // addOrder.setAttribute('onclick', 'addExtraPrice()');
     
+    var theForm = document.getElementById(`forma${formCounter2}`);
+    // console.log('here'+theForm);
+    theForm.addEventListener('submit', function(event){
+        event.preventDefault();
+         for(var i=0;i<mealsArabian.length;i++){
+            for(var j=(i*3) ;j<(i*3+3);j++){
+                var checked1 = document.getElementById(`extraToArabian${j}`).checked;
+                // console.log('id', `extraToItalian${j}`);
+                // console.log(checked1);
+                // console.log(i,"i");
+                // console.log(j,"j");
+                // console.log( mealsItalian[i].price ,'Price');
+
+                if(checked1 == true){
+                    
+                    // console.log( mealsItalian[c].price);
+                    mealsArabian[i].price =mealsArabian[i].price + 2;
+                   
+                   
+                   
+                }
+                // console.log("the j", j);
+            }             //   c++; 
+
+        }
+             
+console.log(mealsArabian[0].price, "price");
+console.log(mealsArabian[0].dish);
+console.log(mealsArabian[1].price, "price");
+console.log(mealsArabian[1].dish);
+console.log(mealsArabian[2].price, "price");
+console.log(mealsArabian[2].dish);
+console.log(mealsArabian[3].price, "price");
+console.log(mealsArabian[3].dish);
+console.log(mealsArabian[4].price, "price");
+console.log(mealsArabian[4].dish);
+    
+   });
+
+   formCounter2++;
     console.log(this.ingredients);
 }
 
@@ -324,7 +422,12 @@ function popUp2() {
     }
     pop2=1;
 }
-  
+var addOrder= document.createElement('input');
+addOrder.setAttribute('id', `add${inputCounter}`);
+addOrder.setAttribute('type', 'submit');
+var myform =document.getElementById("forma4");
+myform.appendChild(addOrder);
+inputCounter++;
 
 }
 console.log(mealsArabian);
