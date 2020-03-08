@@ -37,7 +37,6 @@ MealItalian.prototype.render = function () {
     var li1 = document.createElement('li');
     ul1.appendChild(li1);
     li1.textContent = `${this.dish} `;
-    // for (var i=0; i<)
     var myImg = document.createElement('img');
     myMenu.appendChild(myImg);
     myImg.setAttribute('src', this.imgPath);
@@ -73,28 +72,20 @@ MealItalian.prototype.render = function () {
    
    
     var theForm = document.getElementById(`form${formCounter}`);
-    // console.log('here'+theForm);
     theForm.addEventListener('submit', function(event){
         event.preventDefault();
          for(var i=0;i<mealsItalian.length;i++){
             for(var j=(i*3) ;j<(i*3+3);j++){
                 var checked1 = document.getElementById(`extraToItalian${j}`).checked;
-                // console.log('id', `extraToItalian${j}`);
-                // console.log(checked1);
-                // console.log(i,"i");
-                // console.log(j,"j");
-                // console.log( mealsItalian[i].price ,'Price');
 
                 if(checked1 == true){
                     
-                    // console.log( mealsItalian[c].price);
                     mealsItalian[i].price =mealsItalian[i].price + 2;
                    
                    
                    
                 }
-                // console.log("the j", j);
-            }             //   c++; 
+            }          
 
         }
              
@@ -112,24 +103,13 @@ console.log(mealsItalian[4].dish);
    });
 
 formCounter++;
-    // addOrder.textContent="Add to Order";
-    // addOrder.setAttribute('onclick', 'addExtraPrice()');
     console.log(this.ingredients);
-    // console.log('price : '+ price);
-    // console.log('extra price : '+extraPrice);
+
 
 }
 
 
 
-
-
-// var theForm = document.getElementById('form0');
-// console.log('here'+theForm);
-// theForm.addEventListener('submit', function(event){
-//     event.preventDefault();
-
-// });
 var italyDish1 = new MealItalian(italianDishs[0], 'Cioppino.jpg', italy1);
 var italyDish2 = new MealItalian(italianDishs[1], 'Minestra di ceci.png', italy2);
 var italyDish3 = new MealItalian(italianDishs[2], 'pizza.jpg', italy3);
@@ -169,14 +149,13 @@ function MealIndian(dish, imgPath, ingredients) {
     this.price;
     this.imgPath = `IMG/${imgPath}`;
     this.ingredients = ingredients;
-    // this.extraPrice;
     mealsIndian.push(this);
 }
 MealIndian.prototype.randomPrice = function () {
 
     this.price = Math.floor(Math.random() * (12 - 5 + 1) + 5);
 }
-// var counter1 = 0;
+
 var formCounter1=0;
 
 
@@ -193,7 +172,6 @@ myMenu1.appendChild(ul2);
     var li1 = document.createElement('li');
     ul2.appendChild(li1);
     li1.textContent = `${this.dish} `;
-    // for (var i=0; i<)
     var myImg = document.createElement('img');
     myMenu1.appendChild(myImg);
     myImg.setAttribute('src', this.imgPath);
@@ -209,7 +187,6 @@ myMenu1.appendChild(ul2);
 
     var myform = document.createElement('form');
     myform.setAttribute('id', `formi${formCounter1}`);
-    // formCounter1++;
     li1.appendChild(myform);
 
     for (var i = 0; i < extraTOIndian.length; i++) {
@@ -232,22 +209,14 @@ myMenu1.appendChild(ul2);
          for(var i=0;i<mealsIndian.length;i++){
             for(var j=(i*3) ;j<(i*3+3);j++){
                 var checked1 = document.getElementById(`extraTOIndian${j}`).checked;
-                // console.log('id', `extraToItalian${j}`);
-                // console.log(checked1);
-                // console.log(i,"i");
-                // console.log(j,"j");
-                // console.log( mealsItalian[i].price ,'Price');
 
                 if(checked1 == true){
-                    
-                    // console.log( mealsItalian[c].price);
                     mealsIndian[i].price =mealsIndian[i].price + 2;
                    
                    
                    
                 }
-                // console.log("the j", j);
-            }             //   c++; 
+            }
 
         }
              
@@ -305,7 +274,6 @@ function MealArabian(dish, imgPath, ingredients) {
     this.price;
     this.imgPath = `IMG/${imgPath}`;
     this.ingredients = ingredients;
-    // this.extraPrice;
     mealsArabian.push(this);
 }
 MealArabian.prototype.randomPrice = function () {
@@ -314,9 +282,7 @@ MealArabian.prototype.randomPrice = function () {
 }
 var counter = 0;
 var formCounter2=0;
-// var myMenu3 = document.getElementById('arabianDish');
-//     var ul3 = document.createElement('ul');
-//     myMenu3.appendChild(ul3);
+
 MealArabian.prototype.render2 = function () {
 
     this.randomPrice();
@@ -327,7 +293,6 @@ MealArabian.prototype.render2 = function () {
     var li1 = document.createElement('li');
     ul3.appendChild(li1);
     li1.textContent = `${this.dish} `;
-    // for (var i=0; i<)
     var myImg = document.createElement('img');
     myMenu3.appendChild(myImg);
     myImg.setAttribute('src', this.imgPath);
@@ -357,37 +322,23 @@ MealArabian.prototype.render2 = function () {
         counter++;
         console.log(this.imgPath, 'hi');
     }
-    // var addOrder= document.createElement('input');
-    // addOrder.setAttribute('id', `add${inputCounter}`);
-    // addOrder.setAttribute('type', 'submit');
-    // myform.appendChild(addOrder);
-    // inputCounter++;
-    // // addOrder.textContent="Add to Order";
-    // // addOrder.setAttribute('onclick', 'addExtraPrice()');
     
     var theForm = document.getElementById(`forma${formCounter2}`);
-    // console.log('here'+theForm);
     theForm.addEventListener('submit', function(event){
         event.preventDefault();
          for(var i=0;i<mealsArabian.length;i++){
             for(var j=(i*3) ;j<(i*3+3);j++){
                 var checked1 = document.getElementById(`extraToArabian${j}`).checked;
-                // console.log('id', `extraToItalian${j}`);
-                // console.log(checked1);
-                // console.log(i,"i");
-                // console.log(j,"j");
-                // console.log( mealsItalian[i].price ,'Price');
+
 
                 if(checked1 == true){
                     
-                    // console.log( mealsItalian[c].price);
                     mealsArabian[i].price =mealsArabian[i].price + 2;
                    
                    
                    
                 }
-                // console.log("the j", j);
-            }             //   c++; 
+            }
 
         }
              
