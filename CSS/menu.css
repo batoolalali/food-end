@@ -57,7 +57,7 @@ header nav ul li{
     display:inline-block;
     list-style-type: none;
     margin-top: 3.5%;
-     margin-left: 5%;
+     margin-left: 2%;
      
 }
 header nav ul li a{
@@ -293,7 +293,7 @@ margin-bottom: 10px;
     /* border-radius: 10%; */
     width: 15px;
     height: 15px;
-    background-image: url("https://c8.alamy.com/comp/EPWMJ5/illustration-of-green-plus-icon-on-white-background-EPWMJ5.jpg");
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Nuvola_Red_Plus.svg/600px-Nuvola_Red_Plus.svg.png");
     background-size: cover; 
 }
 

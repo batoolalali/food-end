@@ -2,18 +2,44 @@
 header{
     font-family: 'Anton', sans-serif;
     width: 100%;
-    height: 150px;
-    background-color: #272121;
-    margin-top: -30px;
-
+    height: 100%;
+    background-color: #635b5b21;
+    margin: 0 auto;
+    margin-bottom:20px;
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    transition-property: background-color,box-shadow,transform;
+    background:  url("https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/images/header-background.png") 0 0 repeat-x
+}
+ #linkLogo{
+    display:grid;
+    text-decoration: none;
+    width: 6px;
+    margin-top:0.5%;
+    margin-left: 6%;
+}
+#logo{
+    margin-top: -5px;
+    margin-left: 50px;
 }
 header h1{
-    font-size: 60px;
-    color: #ff0000;
-    margin-left: 60px;
-    
-    margin-top: 30px;
+    font-size: 275%;
+    color: rgb(255, 9, 9);
+    margin-left: 6%;
+    letter-spacing:5px;
+    margin-top:0.5%;
+ 
 }
+header h1:hover{
+    /* font-size: 280%; */
+    text-shadow: 2px 2px rgba(240, 234, 234, 0.849);
+
+}
+
 header img{
    
     margin-top: 25px;
@@ -23,20 +49,34 @@ header img{
 header nav ul{
     
      margin-top: -110px;
-     margin-left: 430px;
+     margin-left: 400px;
      
 }
 header nav ul li{
     display:inline-block;
     list-style-type: none;
- 
-     margin-left: 60px;
+    margin-top: 3.5%;
+     margin-left: 2%;
+     
 }
 header nav ul li a{
     margin-right: 30px;
     color: cornsilk;
-    font-size: 35px;
+    font-size: 30px;
     text-decoration: blink;
+    letter-spacing:10px;
+    font-family: sans-serif;
+    display: inline;
+}
+header nav ul li a:hover{
+    /* font-size: 40px;
+    text-shadow: 2px 2px #FF0000; */
+    color:cornsilk ;
+    background:text #ff0000 ;
+    background-color: #ff0000;
+    box-shadow: 0 0 9px #ff0000, 0 0 35px #ff0000, 0 0 75px #ff0000;
+    transition-delay: 0.1s;
+
 }
 header div{
     height: 50%;
@@ -44,8 +84,9 @@ header div{
 header div img{
     width: 100%;
     position: relative;
- 
+    
 }
+
 
 
 /* This is main */
@@ -58,15 +99,18 @@ header div img{
 /* This is footer */
 footer{
     font-family: 'Anton', sans-serif;
-    width: 100%;
-    height: 100px;
-    background-color: #272121;
+    width: 25%;
+    margin: 0 auto;
+    height: 600%;
+    background-color: #27212170;
     margin-top: 30px;
     text-align: center;
-
 }
-footer p{
+#p{
     color: cornsilk;
+    margin-top: 40px;
+    padding: 5%;
+    letter-spacing: 2px;
    
 }
 
@@ -81,7 +125,7 @@ padding-top: 150px;
 }
 
 .map{
-border:5px solid red;
+
 margin-top: 100px;
 width: 100%;
 height: 50%;
@@ -95,14 +139,165 @@ height: 50%;
 }
 
 #map{
+    margin-left: 50px;
     border:5px solid red;
     border-radius: 10%;
     float: left;
 }
 
 .newForm{
-    border :3px solid yellow;
+    
     width: 50%;
     height: 500px;
     margin-left: 620px;
 }
+
+.clock {
+    color :darkred;
+    font-size: 25px;
+    word-spacing: 2px;
+    border:5px double black;
+    border-radius: 10%;
+    width: 50%;
+    height: 120px;
+    margin:auto;
+    margin-top: 25px;
+    background-color: rgb(197, 189, 189);
+    text-align: center;
+
+}
+
+.clock:hover{
+    color:red;
+    border-color: red;
+    background-color: black;
+}
+
+.map h3{
+    color :darkred;
+    font-size: 25px;
+    word-spacing: 2px;
+    border:5px double black;
+    border-radius: 10%;
+    width: 20%;
+    height: 40px;
+    margin:auto;
+    margin-top: 25px;
+    background-color: rgb(197, 189, 189);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.map h3:hover{
+    color:red;
+    border-color: red;
+    background-color: black;
+}
+
+.form-style-3{
+    margin-left: 90px;
+	max-width: 450px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-3 label{
+	display:block;
+	margin-bottom: 10px;
+}
+.form-style-3 label > span{
+	float: left;
+	width: 120px;
+	color: black;
+	font-weight: bold;
+	font-size: 13px;
+	text-shadow: 1px 1px 1px #fff;
+}
+.form-style-3 fieldset{
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin: 0px 0px 10px 0px;
+	border: 1px solid #FFD2D2;
+	padding: 20px;
+	background: #FFF4F4;
+	box-shadow: inset 0px 0px 15px #FFE5E5;
+	-moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+	-webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+.form-style-3 fieldset legend{
+	color: black;
+	border-top: 1px solid #FFD2D2;
+	border-left: 1px solid #FFD2D2;
+	border-right: 1px solid #FFD2D2;
+	border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	background: #FFF4F4;
+	padding: 0px 8px 3px 8px;
+	box-shadow: -0px -1px 2px #F1F1F1;
+	-moz-box-shadow:-0px -1px 2px #F1F1F1;
+	-webkit-box-shadow:-0px -1px 2px #F1F1F1;
+	font-weight: normal;
+	font-size: 12px;
+}
+.form-style-3 textarea{
+	width:250px;
+	height:100px;
+}
+.form-style-3 input[type=text],
+.form-style-3 input[type=date],
+.form-style-3 input[type=datetime],
+.form-style-3 input[type=number],
+.form-style-3 input[type=search],
+.form-style-3 input[type=time],
+.form-style-3 input[type=url],
+.form-style-3 input[type=email],
+.form-style-3 select, 
+.form-style-3 textarea{
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid rgb(197, 182, 182);
+	outline: none;
+	color: black;
+	padding: 5px 8px 5px 8px;
+	box-shadow: inset 1px 1px 4px rgb(197, 182, 182);;
+	-moz-box-shadow: inset 1px 1px 4px rgb(197, 182, 182);;
+	-webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+	background: #FFEFF6;
+	width:50%;
+}
+.form-style-3  input[type=submit],
+.form-style-3  input[type=button]{
+	background: rgb(212, 192, 192);
+	border: 1px solid red;
+	padding: 5px 15px 5px 15px;
+	color: rgb(15, 11, 13);
+	box-shadow: inset -1px -1px 3px rgb(212, 192, 192);;
+	-moz-box-shadow: inset -1px -1px 3px rgb(212, 192, 192);;
+	-webkit-box-shadow: inset -1px -1px 3px rgb(212, 192, 192);;
+	border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;	
+    font-weight: bold;
+    color :darkred;
+    font-size: 15px;
+    border:5px double black;
+    border-radius: 10%;
+    width: 23%;
+    height:50px;
+    margin:auto;
+    margin-top: 25px;
+    background-color: rgb(197, 189, 189);
+    text-align: center;
+}
+#lastBtn:hover{
+    color:red;
+    border-color: red;
+    background-color: black;
+}
+.required{
+	color:red;
+	font-weight:normal;
+}
+
