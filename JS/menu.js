@@ -37,6 +37,11 @@ MealItalian.prototype.render = function () {
     var li1 = document.createElement('li');
     ul1.appendChild(li1);
     li1.textContent = `${this.dish} `;
+
+    var addDish2 =document.createElement('input');
+    addDish2.setAttribute('type','checkbox');
+    li1.appendChild(addDish2);
+
     var myImg = document.createElement('img');
     myMenu.appendChild(myImg);
     myImg.setAttribute('src', this.imgPath);
@@ -49,6 +54,12 @@ MealItalian.prototype.render = function () {
     var span2 = document.createElement('span');
     li1.appendChild(span2);
     span2.textContent = `  ${this.price} $`;
+
+    var numDish2 =document.createElement('input');
+    numDish2.setAttribute('type','number');
+    numDish2.setAttribute('name','points');
+    numDish2.setAttribute('step','1');
+    li1.appendChild(numDish2);
 
     var myform = document.createElement('form');
     myform.setAttribute('id', `form${formCounter}`);
@@ -123,13 +134,13 @@ function popUp() {
         mealsItalian[i].render();
         
     }
+    var addOrder= document.createElement('input');
+        addOrder.setAttribute('id', `add${inputCounter}`);
+        addOrder.setAttribute('type', 'submit');
+        var myform =document.getElementById("form4");
+        myform.appendChild(addOrder);
+        inputCounter++;
 pop++;}
-var addOrder= document.createElement('input');
-    addOrder.setAttribute('id', `add${inputCounter}`);
-    addOrder.setAttribute('type', 'submit');
-    var myform =document.getElementById("form4");
-    myform.appendChild(addOrder);
-    inputCounter++;
 }
 console.log(mealsItalian);
 	
@@ -168,10 +179,15 @@ var ul2 = document.createElement('ul');
 myMenu1.appendChild(ul2);
 
     console.log('in Indian render');
-
     var li1 = document.createElement('li');
     ul2.appendChild(li1);
     li1.textContent = `${this.dish} `;
+    
+    var addDish =document.createElement('input');
+    addDish.setAttribute('type','checkbox');
+    li1.appendChild(addDish);
+
+
     var myImg = document.createElement('img');
     myMenu1.appendChild(myImg);
     myImg.setAttribute('src', this.imgPath);
@@ -185,10 +201,18 @@ myMenu1.appendChild(ul2);
     li1.appendChild(span2);
     span2.textContent = `  ${this.price} $`;
 
+    var numDish =document.createElement('input');
+    numDish.setAttribute('type','number');
+    numDish.setAttribute('name','points');
+    numDish.setAttribute('step','1');
+    li1.appendChild(numDish);
+
     var myform = document.createElement('form');
     myform.setAttribute('id', `formi${formCounter1}`);
     li1.appendChild(myform);
 
+
+ 
     for (var i = 0; i < extraTOIndian.length; i++) {
         var input1 = document.createElement('input');
         myform.appendChild(input1);
@@ -248,16 +272,19 @@ function popUp1() {
     for (var i = 0; i < mealsIndian.length; i++) {
         mealsIndian[i].render1();
     }
+    var addOrder= document.createElement('input');
+    addOrder.setAttribute('id', `add${inputCounter}`);
+    addOrder.setAttribute('type', 'submit');
+    var myform =document.getElementById("formi4");
+    myform.appendChild(addOrder);
+    inputCounter++;
         pop1++;}
-        var addOrder= document.createElement('input');
-        addOrder.setAttribute('id', `add${inputCounter}`);
-        addOrder.setAttribute('type', 'submit');
-        var myform =document.getElementById("formi4");
-        myform.appendChild(addOrder);
-        inputCounter++;
 
 }
 console.log(mealsIndian);
+
+var c;
+var h=[];
 
 // arabian food
 var mealsArabian = [];
@@ -293,6 +320,12 @@ MealArabian.prototype.render2 = function () {
     var li1 = document.createElement('li');
     ul3.appendChild(li1);
     li1.textContent = `${this.dish} `;
+
+    var addDish3 =document.createElement('input');
+    addDish3.setAttribute('type','checkbox');
+    addDish3.setAttribute('id', `check${formCounter2}`);
+    li1.appendChild(addDish3);
+
     var myImg = document.createElement('img');
     myMenu3.appendChild(myImg);
     myImg.setAttribute('src', this.imgPath);
@@ -305,6 +338,15 @@ MealArabian.prototype.render2 = function () {
     var span2 = document.createElement('span');
     li1.appendChild(span2);
     span2.textContent = `  ${this.price} $`;
+
+    var numDish3 =document.createElement('input');
+    numDish3.setAttribute('type','number');
+    numDish3.setAttribute('name','points');
+    numDish3.setAttribute('step','1');
+    numDish3.setAttribute('min','1');
+    numDish3.setAttribute('id',`steps${formCounter2}`);
+
+    li1.appendChild(numDish3);
 
     var myform = document.createElement('form');
     myform.setAttribute('id', `forma${formCounter2}`);
@@ -327,6 +369,9 @@ MealArabian.prototype.render2 = function () {
     theForm.addEventListener('submit', function(event){
         event.preventDefault();
          for(var i=0;i<mealsArabian.length;i++){
+var checked2 = document.getElementById(`check${i}`).checked;
+var stepDish = document.getElementById(`steps${i}`).value;
+if (checked2 ){
             for(var j=(i*3) ;j<(i*3+3);j++){
                 var checked1 = document.getElementById(`extraToArabian${j}`).checked;
 
@@ -334,30 +379,56 @@ MealArabian.prototype.render2 = function () {
                 if(checked1 == true){
                     
                     mealsArabian[i].price =mealsArabian[i].price + 2;
-                   
-                   
-                   
+                  
+                    mealsArabian[i].price*=parseInt(stepDish);
+                    // console.log('step'+stepDish);
+                    // console.log('type'+typeof(stepDish));
+
                 }
+                
+                
             }
+            // console.log(mealsArabian.price);
+            console.log('mealsArabian[i].price'+mealsArabian[i].price);
+            c = i;
+            console.log('i = '+ i);
+            console.log('mealsArabian[i]'+mealsArabian[i].price);
+            console.log('mealsArabian[c]'+mealsArabian[c]);
+            console.log('c= '+c);
+
+        //    sentToLocal(mealsArabian[i]);
+        h.push(mealsArabian[i]);
+         
+        }
+
+            
 
         }
+        sentToLocal(h);
              
-console.log(mealsArabian[0].price, "price");
-console.log(mealsArabian[0].dish);
-console.log(mealsArabian[1].price, "price");
-console.log(mealsArabian[1].dish);
-console.log(mealsArabian[2].price, "price");
-console.log(mealsArabian[2].dish);
-console.log(mealsArabian[3].price, "price");
-console.log(mealsArabian[3].dish);
-console.log(mealsArabian[4].price, "price");
-console.log(mealsArabian[4].dish);
+// console.log(mealsArabian[0].price, "price");
+// console.log(mealsArabian[0].dish);
+// console.log(mealsArabian[1].price, "price");
+// console.log(mealsArabian[1].dish);
+// console.log(mealsArabian[2].price, "price");
+// console.log(mealsArabian[2].dish);
+// console.log(mealsArabian[3].price, "price");
+// console.log(mealsArabian[3].dish);
+// console.log(mealsArabian[4].price, "price");
+// console.log(mealsArabian[4].dish);
     
    });
 
    formCounter2++;
     console.log(this.ingredients);
 }
+
+function sentToLocal (mealS){
+    var mealsString =JSON.stringify(mealS);
+    localStorage.setItem('meal',mealsString);
+}
+
+
 
 var ArabianDish1 = new MealArabian(ArabianDishs[0], '3_Mansaf-National-Dish.jpg', Arabian1);
 var ArabianDish2 = new MealArabian(ArabianDishs[1], 'maqloba.jpg', Arabian2);
@@ -372,14 +443,14 @@ function popUp2() {
     for (var i = 0; i < mealsArabian.length; i++) {
         mealsArabian[i].render2();
     }
+    var addOrder= document.createElement('input');
+    addOrder.setAttribute('id', `add${inputCounter}`);
+    addOrder.setAttribute('type', 'submit');
+    var myform =document.getElementById("forma4");
+    myform.appendChild(addOrder);
+    inputCounter++;
     pop2=1;
 }
-var addOrder= document.createElement('input');
-addOrder.setAttribute('id', `add${inputCounter}`);
-addOrder.setAttribute('type', 'submit');
-var myform =document.getElementById("forma4");
-myform.appendChild(addOrder);
-inputCounter++;
 
 }
 console.log(mealsArabian);
