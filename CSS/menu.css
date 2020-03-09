@@ -115,8 +115,15 @@ main{
     25%{background-position: 0 100%;}
     100%{background-position: 0 0%;}
 }
-
-
+#italianDish span:first-child {
+    color: black;
+}
+#indianDish span:first-child {
+    color: black;
+}
+#arabianDish span:first-child {
+    color: black;
+}
 /* ////////////////////////////////////////////////////// DONE */
 
 
@@ -130,7 +137,7 @@ main{
 
 #italianDish  span{
     margin-right: 100px;
-    margin-left:-13%; */
+    margin-left:-13%;
 /* }
 #indianDish  span{
     margin-right: 30px;
@@ -165,15 +172,15 @@ margin-left:150px ;
 /* margin-top: -150px; */
 }
 
-#italianDish img,#indianDish img ,#arabianDish img {
+/* #italianDish img,#indianDish img ,#arabianDish img {
     /* margin-left: 800px; */
 
     /* margin-bottom: 200px; */
     /* margin-top: -150px; */
     
     /* width: 25%;
-    height: 25%; */
-}
+    height: 25%; 
+} */
 
 img{
     margin: 90px;
@@ -225,18 +232,18 @@ section button {
     margin-left: 50px;
 }
 
-#add0 ,#add1 ,#add2 ,#add3 ,#add4 ,#add5 ,#add6 ,#add7 ,#add8 ,
-#add9 ,#add10 ,#add11 ,#add12 ,#add13 ,#add14 ,#add15 :hover{
+#add0 ,#add1 ,#add2:hover{
     background-color: #706b6b;
-    margin-left: 25px;
+    margin-left: 20px;
+    margin-bottom: 0px;
     height: 30px;
     border-radius: 20%;
     font-size: large;
     font-weight: bold;
-    color: rgb(206, 57, 57);
+    color: rgb(49, 33, 33);
     box-shadow: 0 0 2px #f00d0dea, 0 0 15px #ff0000, 0 0 5px #ff0000;
     transition-delay: 0.2s;
-
+    
 }
 
 #uniqLogo{
@@ -247,13 +254,12 @@ section button {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd65e', endColorstr='#febf04'   );
     margin-left: 1070px;
     position: fixed;
-    margin-top: -100px;
-    opacity: 0.5;
+    margin-top: 30px;
+    opacity: 0.8;
     }
     
-
   .ribbon-front {
-	background-color: #cc3333;	height: 50px;
+	background-color: #eb0808;	height: 50px;
 	width: 240px;
 	position: relative;
 	left:1px;
@@ -266,20 +272,29 @@ section button {
 
 
 .firstButton , .seconButton , .thirdButton{
-    margin-left: 50%;
+    /* margin-left: 70%; */
+    /* padding-left: 0.6%; */
+
+margin-bottom: 10px;
+    /* background-color: rgba(173, 107, 107, 0); */
+    margin-left: 10%;
     padding-left: 1%;
     padding: 0.08%;
-    background-color: rgb(173, 107, 107);
+    margin-top: 2%;
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
 }
 
 .firstButton span , .seconButton span, .thirdButton span{
     display: inline-block;
-    padding: 10px 20px 20px 10px;
-    border-radius: 50%;
+    padding: 15px;
+    /* border-radius: 10%; */
     width: 15px;
     height: 15px;
     background-image: url("https://c8.alamy.com/comp/EPWMJ5/illustration-of-green-plus-icon-on-white-background-EPWMJ5.jpg");
-    background-size: cover;    
+    background-size: cover; 
 }
 
 
@@ -290,18 +305,19 @@ section button {
     background-color:  #c10000;
     color: #dedede;
     text-align: center;
-    display: inline-block;
-    margin: 0 auto;
-    margin-left: 35%;
-    margin-right: 25%;
-    margin-bottom: 5%;
-    margin-top: 5%;
+    /* display: inline-block; */
+    /* margin: 0 auto; */
+    margin-left: 5%;
+    /* margin-right: 25%; */
+    /* margin-bottom: 5%; */
+    /* margin-top: 5%; */
     text-shadow:6px 6px 15px black;
     letter-spacing: 10px;
     padding-left: 2.5%;
     padding-right: 1.5%;
-    border-radius: 30%;
-    
+    border-radius: 2%;
+    width: 450px;
+   
 }
 
 #italian span,#indian span,#arabian span {
