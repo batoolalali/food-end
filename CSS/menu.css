@@ -124,63 +124,25 @@ main{
 #arabianDish span:first-child {
     color: black;
 }
-/* ////////////////////////////////////////////////////// DONE */
 
-
- 
-
-/* #italianDish img{
-    margin-right: 140px;
-    margin-left:5%;
-   margin-bottom: -2%;
-}
-
-#italianDish  span{
-    margin-right: 100px;
-    margin-left:-13%;
-/* }
-#indianDish  span{
-    margin-right: 30px;
-    margin-left:-13%;
-}
-
-
-#indianDish img{
-    margin-right: 140px;
-    margin-left:-1%;
-   margin-bottom: -1%;
-}
-#arabianDish  span{
-    margin-right: 30px;
-    margin-left:-13%;
-}
-
-#arabianDish img{
-    margin-right: 140px;
-    margin-left:-1%;
-   margin-bottom: -1%;
-}  */
-/* #span2{
-    margin-left: -115px;
-} */
 
 
 
 #italianDish ,#indianDish ,#arabianDish {
 
-margin-left:150px ;
-/* margin-top: -150px; */
+margin-left:180px ;
 }
 
-/* #italianDish img,#indianDish img ,#arabianDish img {
-    /* margin-left: 800px; */
-
-    /* margin-bottom: 200px; */
-    /* margin-top: -150px; */
-    
-    /* width: 25%;
-    height: 25%; 
-} */
+input {
+    background-color: #0e0e0f21;
+    border: 2px dotted red;
+    border-radius: 10%;
+    text-align: center;
+    font-size: 25px;
+    width: 90px;
+    height: 25px;
+    padding-left: 0 40px;
+}
 
 img{
     margin: 90px;
@@ -193,6 +155,8 @@ section img{
     margin-top: 25px;
     border: 3px solid white;
     border-radius: 50%;
+    margin-left: -140px;
+    margin-top: -170px;
 
 }
 
@@ -224,6 +188,17 @@ section img:hover{
     color: #ff0000;
     background-color: rgba(173, 152, 152, 0.445);
 }
+#italian ul{
+    margin-left: 50px;
+}
+
+#arabian ul{
+    margin-left: 50px;
+}
+
+#indian ul{
+    margin-left: 50px;
+}
 
 section button {
     background-color: rgba(231, 40, 56, 0.87);
@@ -232,7 +207,8 @@ section button {
     margin-left: 50px;
 }
 
-#add0 ,#add1 ,#add2:hover{
+
+#add0 ,#add1 ,#add2{
     background-color: #706b6b;
     margin-left: 20px;
     margin-bottom: 0px;
@@ -243,32 +219,13 @@ section button {
     color: rgb(49, 33, 33);
     box-shadow: 0 0 2px #f00d0dea, 0 0 15px #ff0000, 0 0 5px #ff0000;
     transition-delay: 0.2s;
-    
 }
 
-#uniqLogo{
-
-    
-   
-    background: -webkit-linear-gradient(top, rgb(233, 9, 9) 0%,rgb(179, 45, 45) 35%,rgb(168, 132, 132) 70% ,rgba(255, 6, 6, 0.788) 65%,rgb(170, 165, 165) 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd65e', endColorstr='#febf04'   );
-    margin-left: 1070px;
-    position: fixed;
-    margin-top: 30px;
-    opacity: 0.8;
-    }
-    
-  .ribbon-front {
-	background-color: #eb0808;	height: 50px;
-	width: 240px;
-	position: relative;
-	left:1px;
-    z-index: 2; font:20px/50px bold Verdana, Geneva, sans-serif; color:#f8f8f8; text-align:center;text-shadow: 0px 1px 2px #cc6666;
+#add0:hover , #add1:hover , #add2:hover{
+    border:5px solid red;
+    color:red;
+    background:black;
 }
-
-
-
-
 
 
 .firstButton , .seconButton , .thirdButton{
@@ -295,6 +252,24 @@ margin-bottom: 10px;
     height: 15px;
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Nuvola_Red_Plus.svg/600px-Nuvola_Red_Plus.svg.png");
     background-size: cover; 
+    margin-bottom: 50px;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+from { box-shadow:0px 0px 10px 3px red; }
+to { box-shadow:0px 0px 20px 5px darkred; }
+}
+
+.firstButton span:hover , .seconButton span:hover, .thirdButton span:hover{
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+    background-color: black;
+    border-radius: 50%;
+
+
 }
 
 
@@ -353,5 +328,25 @@ footer{
     margin-top: 40px;
     padding: 5%;
     letter-spacing: 2px;
-   
+}
+
+
+.epicTitle h1,h2 {
+    font-weight: 200;
+    margin: 0.4em 0;
+  }
+.epicTitle h1 { font-size: 3.5em;
+text-align: center; }
+.epicTitle h2 {
+    color: #888;
+    font-size: 2em;
+    margin-left:100px;
+    animation:hehe 2s linear infinite;
+    width: 12%;
+    text-align: center;
+  }
+
+  @keyframes hehe{
+from { box-shadow:0px 0px 10px 3px red; }
+to { box-shadow:0px 0px 20px 5px darkred; }
 }
