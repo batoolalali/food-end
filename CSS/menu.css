@@ -3,7 +3,7 @@ header{
     font-family: 'Anton', sans-serif;
     width: 100%;
     height: 100%;
-    background-color: #635b5b21;
+    background-color: #0e0e0f21;
     margin: 0 auto;
     /* margin-bottom:20px; */
     /* position: fixed; */
@@ -13,6 +13,7 @@ header{
     width: 100%;
     height: 75px;
     transition-property: background-color,box-shadow,transform;
+    opacity: 75%;   
     background:  url("https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/images/header-background.png") 0 0 repeat-x
 }
  #linkLogo{
@@ -116,6 +117,7 @@ main{
 
 
  
+<<<<<<< HEAD
 #italianDish  span{
     margin-right: 150px;
     margin-left: 0;
@@ -133,10 +135,27 @@ main{
     margin-right: 150px;
     margin-left:10%;
    margin-bottom: 1%;
+=======
+
+/* #italianDish img{
+    margin-right: 140px;
+    margin-left:5%;
+   margin-bottom: -2%;
+}
+
+#italianDish  span{
+    margin-right: 100px;
+    margin-left:-13%; */
+/* }
+#indianDish  span{
+    margin-right: 30px;
+    margin-left:-13%;
+>>>>>>> e47e8526c7e0f4f6d7bf5c7e48a9386285b7e469
 }
 
 
 #indianDish img{
+<<<<<<< HEAD
     margin-right: 150px;
     margin-left:10%;
    margin-bottom: 5%;
@@ -148,6 +167,25 @@ main{
    margin-bottom: 5%;
 } 
  
+=======
+    margin-right: 140px;
+    margin-left:-1%;
+   margin-bottom: -1%;
+}
+#arabianDish  span{
+    margin-right: 30px;
+    margin-left:-13%;
+}
+
+#arabianDish img{
+    margin-right: 140px;
+    margin-left:-1%;
+   margin-bottom: -1%;
+}  */
+/* #span2{
+    margin-left: -115px;
+} */
+>>>>>>> e47e8526c7e0f4f6d7bf5c7e48a9386285b7e469
 
 
 
@@ -208,13 +246,25 @@ section button {
     margin-left: 50px;
 }
 
+#add0 ,#add1 ,#add2 ,#add3 ,#add4 ,#add5 ,#add6 ,#add7 ,#add8 ,
+#add9 ,#add10 ,#add11 ,#add12 ,#add13 ,#add14 ,#add15 :hover{
+    background-color: #706b6b;
+    margin-left: 25px;
+    height: 30px;
+    border-radius: 20%;
+    font-size: large;
+    font-weight: bold;
+    color: rgb(206, 57, 57);
+    box-shadow: 0 0 2px #f00d0dea, 0 0 15px #ff0000, 0 0 5px #ff0000;
+    transition-delay: 0.2s;
 
+}
 
 #uniqLogo{
 
     /* width:220px; height:200px; margin:5% auto; background: rgb(114, 114, 114);  */
    
-    background: -webkit-linear-gradient(top, rgb(170, 165, 165) 0%,rgba(255, 6, 6, 0.788) 35%,rgb(170, 165, 165) 70% ,rgba(255, 6, 6, 0.788) 65%,rgb(170, 165, 165) 100%); 
+    background: -webkit-linear-gradient(top, rgb(233, 9, 9) 0%,rgb(179, 45, 45) 35%,rgb(168, 132, 132) 70% ,rgba(255, 6, 6, 0.788) 65%,rgb(170, 165, 165) 100%); 
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd65e', endColorstr='#febf04'   );
     margin-left: 1070px;
     position: fixed;
@@ -229,66 +279,8 @@ section button {
 	width: 240px;
 	position: relative;
 	left:1px;
-	z-index: 2; font:20px/50px bold Verdana, Geneva, sans-serif; color:#f8f8f8; text-align:center;text-shadow: 0px 1px 2px #cc6666;
+    z-index: 2; font:20px/50px bold Verdana, Geneva, sans-serif; color:#f8f8f8; text-align:center;text-shadow: 0px 1px 2px #cc6666;
 }
-
-  /* .ribbon-front,
-  .ribbon-back-left,
-  .ribbon-back-right
-{
-	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
-	-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
-	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
-	-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
-} */
-
-  /* .ribbon-edge-topleft,
-  .ribbon-edge-topright,
-  .ribbon-edge-bottomleft,
-  .ribbon-edge-bottomright {
-	position: absolute;
-	z-index: 1;
-	border-style:solid;
-	height:0px;
-	width:0px;
-} */
-
-  /* .ribbon-edge-topleft,
-  .ribbon-edge-topright {
-} */
-
-  /* .ribbon-edge-bottomleft,
-  .ribbon-edge-bottomright {
-	top: 50px;
-} */
-
-  /* .ribbon-edge-topleft,
-  .ribbon-edge-bottomleft {
-	left: -10px;
-	border-color: transparent #9B1724 transparent transparent;
-} */
-
-  /* .ribbon-edge-topleft {
-	top: -5px;
-	border-width: 5px 10px 0 0;
-} */
-  /* .ribbon-edge-bottomleft {
-	border-width: 0 10px 0px 0;
-} */
-
-  /* .ribbon-edge-topright,
-  .ribbon-edge-bottomright {
-	left: 220px;
-	border-color: transparent transparent transparent #9B1724;
-} */
-
-  /* .ribbon-edge-topright {
-	top: 0px;
-	border-width: 0px 0 0 10px;
-} */
-  /* .ribbon-edge-bottomright {
-	border-width: 0 0 5px 10px;
-} */
 
 
 @-webkit-keyframes flow {
@@ -306,7 +298,7 @@ section button {
 
 .firstButton , .seconButton , .thirdButton{
     margin-left: 600px;
-    background-color: rgb(75, 75, 75);
+    background-color: rgb(173, 107, 107);
 }
 
 .firstButton span , .seconButton span, .thirdButton span{
@@ -327,10 +319,10 @@ section button {
 
 
 
-.firstButton:active span , .seconButton:active span , .thirdButton:active span{
+/* .firstButton:active span , .seconButton:active span , .thirdButton:active span{
     -webkit-transform: translate(0, 5px); 
     
-}
+} */
 
 
 
