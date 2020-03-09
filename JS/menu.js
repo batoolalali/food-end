@@ -59,6 +59,7 @@ MealItalian.prototype.render = function () {
     numDish2.setAttribute('type','number');
     numDish2.setAttribute('name','points');
     numDish2.setAttribute('step','1');
+    numDish2.setAttribute('min','1');
     li1.appendChild(numDish2);
 
     var myform = document.createElement('form');
@@ -205,6 +206,7 @@ myMenu1.appendChild(ul2);
     numDish.setAttribute('type','number');
     numDish.setAttribute('name','points');
     numDish.setAttribute('step','1');
+    numDish.setAttribute('min','1');
     li1.appendChild(numDish);
 
     var myform = document.createElement('form');
@@ -371,6 +373,7 @@ MealArabian.prototype.render2 = function () {
          for(var i=0;i<mealsArabian.length;i++){
 var checked2 = document.getElementById(`check${i}`).checked;
 var stepDish = document.getElementById(`steps${i}`).value;
+console.log('step'+stepDish);
 if (checked2 ){
             for(var j=(i*3) ;j<(i*3+3);j++){
                 var checked1 = document.getElementById(`extraToArabian${j}`).checked;
@@ -379,15 +382,15 @@ if (checked2 ){
                 if(checked1 == true){
                     
                     mealsArabian[i].price =mealsArabian[i].price + 2;
-                  
-                    mealsArabian[i].price*=parseInt(stepDish);
-                    // console.log('step'+stepDish);
-                    // console.log('type'+typeof(stepDish));
-
+                    console.log('mealsArabian[i].price'+mealsArabian[i].price);
+                    console.log('type'+stepDish);
+                    
                 }
                 
                 
             }
+            console.log('mealsArabian[i].price'+mealsArabian[i].price);
+            mealsArabian[i].price = mealsArabian[i].price * stepDish;
             // console.log(mealsArabian.price);
             console.log('mealsArabian[i].price'+mealsArabian[i].price);
             c = i;
