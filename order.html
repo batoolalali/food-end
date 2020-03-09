@@ -48,9 +48,12 @@
 
     <main>
         <div class="menuJS">
-            <h1>
-                JS CODE
-            </h1>
+           <p class="getOrder">
+            Your order is:</p>
+            <ul class="getOrder" id="p1">
+
+
+            </ul>
         </div>
         <div class ="clock">
             <p>Your order will be ready at <span id="demo"></span>:<span id="demo1"></span></p>
@@ -65,7 +68,7 @@
                 width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" id="map"></iframe>
             <div class="newForm">
                 <div class="form-style-3">
-                    <form>
+                    <form onsubmit="return false">
                     <fieldset><legend>Personal</legend>
                     <label for="field1"><span>First Name <span class="required">*</span></span><input type="text" class="input-field" name="field1" value="" /></label>
                     <label for="field2"><span>Last Name <span class="required">*</span></span><input type="text" class="input-field" name="field2" value="" /></label>

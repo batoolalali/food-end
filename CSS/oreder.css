@@ -92,14 +92,16 @@ header div img{
 /* This is main */
 
 
-
-
+.getOrder
+{
+    color: #ff0000;
+}
 
 
 /* This is footer */
 footer{
     font-family: 'Anton', sans-serif;
-    width: 25%;
+    width: 100%;
     margin: 0 auto;
     height: 600%;
     background-color: #27212170;
@@ -113,15 +115,24 @@ footer{
     letter-spacing: 2px;
    
 }
+#p1, li, .getOrder{
+list-style-type: none;
+color :darkred;
+
+}
 
 .menuJS{
-width: 100%;
-height: 500px;
-margin-top: 150px;
-background-color: black;
-color: red;
-text-align: center;
-padding-top: 150px;
+    color :darkred;
+    font-size: 25px;
+    word-spacing: 2px;
+    border:5px double black;
+    border-radius: 10%;
+    width: 50%;
+    height: 120px;
+    margin:auto;
+    margin-top: 150px;
+    background-color: rgb(197, 189, 189);
+    text-align: center;
 }
 
 .map{
@@ -167,7 +178,14 @@ height: 50%;
 
 }
 
-.clock:hover{
+.clock:hover {
+    color:red;
+    border-color: red;
+    background-color: black;
+}
+
+.menuJS:hover
+{
     color:red;
     border-color: red;
     background-color: black;
