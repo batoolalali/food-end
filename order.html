@@ -4,12 +4,16 @@
 <head>
 
     <title>FoodEnd</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
     <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/oreder.css">
     <link rel="shortcut icon" href="IMG/logoTap.png" type="image/png" sizes="152x152">
     <link rel="117-1174234_png-file-svg-food-png-icon-doodle-clipart"
         href="IMG/117-1174234_png-file-svg-food-png-icon-doodle-clipart.png" type="image/png" sizes="152x152">
 
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pragati+Narrow&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -28,24 +32,75 @@
                 </li>
                 <li>
 
-                    
+
                     <a href="order.html">ORDER</a>
                 </li>
             </ul>
         </nav>
 
-        
+
     </header>
-    
+
     <main>
-   
+        <div class="menuJS">
+            <h1>
+                JS CODE
+            </h1>
+        </div>
+        <div>
+            <p>Your order will be ready at <span id="demo"></span>:<span id="demo1"></span></p>
+            <p>if you need a Delivery Service, Please fill the form below.</p>
+        </div>
 
-
+        <div class="map">
+            <h3>Please set your location</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d433870.8339229468!2d35.666748862011346!3d31.835451816341703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b5fb85d7981af%3A0x631c30c0f8dc65e8!2sAmman!5e0!3m2!1sen!2sjo!4v1583744276359!5m2!1sen!2sjo"
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" id="map"></iframe>
+            <div class="newForm">
+                <form>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname" value="Please Insert you first name only"
+                        size="25px"><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname" value="Please Insert you last name only" size="25px"><br>
+                    <label for="Pnumber">Phone number:</label><br>
+                    <input type="text" id="phoneNu" name="phoneNu" value="Please Insert your Phone number"
+                        size="25px"><br><br>
+                        
+                    <label>Set your location</label>
+                
+                    <select id="myList">
+                        <option value="1">Abu Nusair</option>
+                        <option value="2">Al-Abdalli</option>
+                        <option value="3">Al-Jubayhah</option>
+                        <option value="4">Al-Madinah</option>
+                        <option value="5">Al-Yurmuk</option>
+                        <option value="6">An--Naser</option>
+                        <option value="7">Basman</option>
+                        <option value="8">Marj-al-Hamam</option>
+                        <option value="9">Marka</option>
+                        <option value="10">Ras-Alain</option>
+                        <option value="11">Shafa Badran</option>
+                        <option value="12">Suwaylih</option>
+                        <option value="13">Tariq</option>
+                        <option value="14">Tila al-Ali</option>
+                        <option value="15">Uhud</option>
+                        <option value="16">Wadi-Alsair</option>
+                        <option value="17">Zahran</option>
+                        <option value="18">Badr</option>
+                        <br><br>
+                        <input type="submit" value="Submit">
+                    </select>
+                </form>
+            </div>
+        </div>
     </main>
 
     <footer>
         <p>Copyright &copy;2020 FoodEnd.</p>
     </footer>
+    <script src="/JS/order.js"></script>
 </body>
 
 </html>
