@@ -53,3 +53,25 @@ function totalPrice(){
 
 getFromLocal();
 
+var test=0;
+var theForm = document.getElementById("theform");
+theForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (test===0)
+    {
+    var firstName=document.getElementById('fName').value;
+    var lastName=document.getElementById('lName').value;
+    var phone=document.getElementById('phone').value;
+    console.log(firstName);
+    console.log(lastName);
+    console.log(phone);
+    if (firstName !=='' && lastName!=='' )
+    {   var welcome=document.getElementById('welcome')
+       var wel=document.createElement('span');
+       wel.textContent=`Welcome ${firstName}`;
+       welcome.appendChild(wel);
+    }else{ alert("please enter your name");}
+}
+test++;
+
+});
