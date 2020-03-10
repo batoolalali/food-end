@@ -112,7 +112,7 @@ footer{
     color: cornsilk;
     margin-top: 40px;
     padding: 5%;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
    
 }
 #p1, li, .getOrder{
@@ -128,7 +128,7 @@ color :darkred;
     border:5px double black;
     border-radius: 10%;
     width: 50%;
-    height: 120px;
+    height: 100%;
     margin:auto;
     margin-top: 150px;
     background-color: rgb(197, 189, 189);
@@ -177,19 +177,22 @@ height: 50%;
     text-align: center;
 
 }
+body{
+    background-color: rgb(240, 230, 232);
+}
 
-.clock:hover {
+/* .clock:hover {
     color:red;
     border-color: red;
     background-color: black;
-}
+} */
 
-.menuJS:hover
+/* .menuJS:hover
 {
     color:red;
     border-color: red;
     background-color: black;
-}
+} */
 
 .map h3{
     color :darkred;
