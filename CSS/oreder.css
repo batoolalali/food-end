@@ -312,3 +312,13 @@ body{
 	font-weight:normal;
 }
 
+#welMessage{
+    line-height: 5px;
+    float: right;
+    font-weight: bold;
+    color :darkred;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+
+}
+

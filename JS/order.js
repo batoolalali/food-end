@@ -66,8 +66,9 @@ theForm.addEventListener('submit', function (event) {
     console.log(lastName);
     console.log(phone);
     if (firstName !=='' && lastName!=='' )
-    {   var welcome=document.getElementById('welcome')
+    {   var welcome=document.getElementById('field')
        var wel=document.createElement('span');
+       wel.setAttribute('id', 'welMessage');
        wel.textContent=`Welcome ${firstName}`;
        welcome.appendChild(wel);
     }else{ alert("please enter your name");}
