@@ -1,7 +1,7 @@
 'use strict';
-var h1 = [];
+var h = [];
 var mealsItalian = [];
-var italianDishs = ['Cioppino: ', 'Minestra di ceci: ', 'Pizza: ', 'Veal Milanese: ', 'Cannoli: '];
+var italianDishs = [' Cioppino: ', ' Minestra di ceci: ', ' Pizza: ', ' Veal Milanese: ', ' Cannoli: '];
 var italy1 = [' Dungeness crab', ' scallops', ' fish', ' tomatoes.'];
 var italy2 = [' chestnuts',' potato', ' pasta', ' cabbage.'];
 var italy3 = [' Dough', ' sauce', ' cheese', ' pepper.'];
@@ -15,6 +15,7 @@ function MealItalian(dish, imgPath, ingredients) {
     this.imgPath = `IMG/${imgPath}`;
     this.ingredients = ingredients;
     this.extraPrice = 0;
+    this.quantity;
     mealsItalian.push(this);
 }
 MealItalian.prototype.randomPrice = function () {
@@ -24,7 +25,11 @@ MealItalian.prototype.randomPrice = function () {
 var c = mealsItalian.length;
 console.log(c);
 
+
+
 var counter = 0;
+var counter1 = 0;
+var counter2 = 0;
 var inputCounter = 0;
 var formCounter = 0;
 
@@ -41,7 +46,7 @@ MealItalian.prototype.render = function () {
 
     var addDish2 = document.createElement('input');
     addDish2.setAttribute('type', 'checkbox');
-    addDish2.setAttribute('id', `check${formCounter}`);
+    addDish2.setAttribute('id', `checkitaly${formCounter}`);
     li1.appendChild(addDish2);
 
     var myImg = document.createElement('img');
@@ -92,7 +97,7 @@ span2.textContent = `price :${this.price}$ Amount:`;
         event.preventDefault();
                 geeks();
         for (var i = 0; i < mealsItalian.length; i++) {
-            var checked2 = document.getElementById(`check${i}`).checked;
+            var checked2 = document.getElementById(`checkitaly${i}`).checked;
             var stepDish = document.getElementById(`steps${i}`).value;
             console.log('step' + stepDish);
             
@@ -111,11 +116,12 @@ span2.textContent = `price :${this.price}$ Amount:`;
                 mealsItalian[i].price = mealsItalian[i].price * stepDish;
                 console.log('mealsItalian[i].price' + mealsItalian[i].price);
 
-                h1.push(mealsItalian[i]);
+                mealsItalian[i].quantity = stepDish;
+                h.push(mealsItalian[i]);
             }
 
         }
-        sentToLocal3(h1);
+        sentToLocal(h);
 
         // console.log(mealsItalian[0].price, "price");
         // console.log(mealsItalian[0].dish);
@@ -136,10 +142,10 @@ span2.textContent = `price :${this.price}$ Amount:`;
 
 }
 
-function sentToLocal3(mealS3) {
-    var mealsString3 = JSON.stringify(mealS3);
-    localStorage.setItem('meal', mealsString3);
-}
+// function sentToLocal3(mealS3) {
+//     var mealsString3 = JSON.stringify(mealS3);
+//     localStorage.setItem('meal', mealsString3);
+// }
 
 
 
@@ -170,7 +176,7 @@ console.log(mealsItalian);
 //indian food
 var h2 = [];
 var mealsIndian = [];
-var indianDishs = ['Biryani: ', ' Chaat: ', 'Aloo shimla mirch: ', 'Poha: ', 'Paratha: '];
+var indianDishs = [' Biryani: ', ' Chaat: ', ' Aloo shimla mirch: ', ' Poha: ', ' Paratha: '];
 var indian1 = [' Mixed rice', ' spices', ' meats', ' plain yogurt.'];
 var indian2 = [' Potato patty fried', ' sauces', ' tomato', ' spices.'];
 var indian3 = [' Green capsicum', 'red chilli powder.'];
@@ -184,6 +190,7 @@ function MealIndian(dish, imgPath, ingredients) {
     this.price;
     this.imgPath = `IMG/${imgPath}`;
     this.ingredients = ingredients;
+    this.quantity;
     mealsIndian.push(this);
 }
 MealIndian.prototype.randomPrice = function () {
@@ -209,7 +216,7 @@ MealIndian.prototype.render1 = function () {
 
     var addDish = document.createElement('input');
     addDish.setAttribute('type', 'checkbox');
-    addDish.setAttribute('id', `check${formCounter1}`);
+    addDish.setAttribute('id', `checkindia${formCounter1}`);
 
     li1.appendChild(addDish);
 
@@ -246,12 +253,12 @@ MealIndian.prototype.render1 = function () {
         var input1 = document.createElement('input');
         myform.appendChild(input1);
         input1.setAttribute('type', 'checkbox');
-        input1.setAttribute('id', `extraTOIndian${counter}`);
+        input1.setAttribute('id', `extraTOIndian${counter1}`);
         var label1 = document.createElement('label');
-        label1.setAttribute('for', `extraTOIndian${counter}`);
+        label1.setAttribute('for', `extraTOIndian${counter1}`);
         label1.textContent = extraTOIndian[i];
         myform.appendChild(label1);
-        counter++;
+        counter1++;
         console.log(this.imgPath, 'hi');
     }
 
@@ -261,7 +268,7 @@ MealIndian.prototype.render1 = function () {
         event.preventDefault();
         geeks();
         for (var i = 0; i < mealsIndian.length; i++) {
-            var checked2 = document.getElementById(`check${i}`).checked;
+            var checked2 = document.getElementById(`checkindia${i}`).checked;
             var stepDish = document.getElementById(`steps${i}`).value;
             if (checked2 ){
             for (var j = (i * 3); j < (i * 3 + 3); j++) {
@@ -277,11 +284,13 @@ MealIndian.prototype.render1 = function () {
             mealsIndian[i].price = mealsIndian[i].price *stepDish;
             
     
-        h2.push(mealsIndian[i]);
+        
+            mealsIndian[i].quantity = stepDish;
+            h.push(mealsIndian[i]);
         }
 
         }
-        sentToLocal2(h2);
+        sentToLocal(h);
 
         // console.log(mealsIndian[0].price, "price");
         // console.log(mealsIndian[0].dish);
@@ -301,10 +310,10 @@ MealIndian.prototype.render1 = function () {
 
 }
 
-function sentToLocal2(mealS2) {
-    var mealsString2 = JSON.stringify(mealS2);
-    localStorage.setItem('meal', mealsString2);
-}
+// function sentToLocal2(mealS2) {
+//     var mealsString2 = JSON.stringify(mealS2);
+//     localStorage.setItem('meal', mealsString2);
+// }
 
 var indianDish1 = new MealIndian(indianDishs[0], 'biryani.jpg', indian1);
 var indianDish2 = new MealIndian(indianDishs[1], 'cheat.jpg', indian2);
@@ -330,11 +339,11 @@ function popUp1() {
 console.log(mealsIndian);
 
 var c;
-var h = [];
+// var h = [];
 
 // arabian food
 var mealsArabian = [];
-var ArabianDishs = ['Mansaf: ', ' Maqloba: ', 'Musakhan: ', 'Flafel: ', 'Makmura: '];
+var ArabianDishs = [' Mansaf: ', ' Maqloba: ', ' Musakhan: ', ' Flafel: ', ' Makmura: '];
 var Arabian1 = [' rice', ' lamb', ' bulgur', ' sauce', ' dried yogurt.'];
 var Arabian2 = [' chicken', ' fried vegetables', ' sauces', ' spices.'];
 var Arabian3 = [' chicken baked', 'saffron', 'taboon bread.'];
@@ -347,13 +356,14 @@ function MealArabian(dish, imgPath, ingredients) {
     this.price;
     this.imgPath = `IMG/${imgPath}`;
     this.ingredients = ingredients;
+    this.quantity;
     mealsArabian.push(this);
 }
 MealArabian.prototype.randomPrice = function () {
 
     this.price = Math.floor(Math.random() * (12 - 5 + 1) + 5);
 }
-var counter = 0;
+// var counter = 0;
 var formCounter2 = 0;
 
 MealArabian.prototype.render2 = function () {
@@ -369,7 +379,7 @@ MealArabian.prototype.render2 = function () {
 
     var addDish3 = document.createElement('input');
     addDish3.setAttribute('type', 'checkbox');
-    addDish3.setAttribute('id', `check${formCounter2}`);
+    addDish3.setAttribute('id', `checkarabia${formCounter2}`);
     li1.appendChild(addDish3);
 
     var myImg = document.createElement('img');
@@ -403,12 +413,12 @@ MealArabian.prototype.render2 = function () {
         var input1 = document.createElement('input');
         myform.appendChild(input1);
         input1.setAttribute('type', 'checkbox');
-        input1.setAttribute('id', `extraToArabian${counter}`);
+        input1.setAttribute('id', `extraToArabian${counter2}`);
         var label1 = document.createElement('label');
-        label1.setAttribute('for', `extraToArabian${counter}`);
+        label1.setAttribute('for', `extraToArabian${counter2}`);
         label1.textContent = extraToArabian[i];
         myform.appendChild(label1);
-        counter++;
+        counter2++;
         console.log(this.imgPath, 'hi');
     }
 
@@ -417,7 +427,7 @@ MealArabian.prototype.render2 = function () {
         event.preventDefault();
         geeks();
         for (var i = 0; i < mealsArabian.length; i++) {
-            var checked2 = document.getElementById(`check${i}`).checked;
+            var checked2 = document.getElementById(`checkarabia${i}`).checked;
             var stepDish = document.getElementById(`steps${i}`).value;
             console.log('step' + stepDish);
             if (checked2) {
@@ -446,7 +456,9 @@ MealArabian.prototype.render2 = function () {
                 console.log('c= ' + c);
 
                 //    sentToLocal(mealsArabian[i]);
+                mealsArabian[i].quantity = stepDish;
                 h.push(mealsArabian[i]);
+             
 
             }
 
