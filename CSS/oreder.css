@@ -87,6 +87,10 @@ header div img{
     
 }
 
+div ul li{
+position: relative;
+text-align: center;}
+
 
 
 /* This is main */
@@ -94,7 +98,7 @@ header div img{
 
 .getOrder
 {
-    color: #ff0000;
+    padding-left: 25px;
 }
 
 
@@ -128,6 +132,7 @@ color :darkred;
     border:5px double black;
     border-radius: 10%;
     width: 50%;
+
     height: 100%;
     margin:auto;
     margin-top: 150px;
