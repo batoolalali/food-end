@@ -1,20 +1,15 @@
 /* This is header */
-header{
-    font-family: 'Anton', sans-serif;
-    width: 100%;
-    height: 100%;
-    background-color: #635b5b21;
-    margin: 0 auto;
-    margin-bottom:20px;
-    position: fixed;
-    z-index: 6;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 75px;
-    transition-property: background-color,box-shadow,transform;
-    background:  url("https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/images/header-background.png") 0 0 repeat-x
+html{
+    background-color: white ;
 }
+
+body{
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgba(240, 234, 234, 0.849);
+    border-radius: 5px;
+}
+
  #linkLogo{
     display:grid;
     text-decoration: none;
@@ -22,88 +17,115 @@ header{
     margin-top:0.5%;
     margin-left: 6%;
 }
-#logo{
-    margin-top: -5px;
-    margin-left: 50px;
-}
-header h1{
-    font-size: 275%;
-    color: rgb(255, 9, 9);
-    margin-left: 6%;
-    letter-spacing:5px;
-    margin-top:0.5%;
- 
-}
-header h1:hover{
-    /* font-size: 280%; */
-    text-shadow: 2px 2px rgba(240, 234, 234, 0.849);
-
-}
-
-header img{
-   
-    margin-top: 25px;
-    margin-left: 25px;
-   
-}
-header nav ul{
-    
-     margin-top: -110px;
-     margin-left: 400px;
-     
-}
-header nav ul li{
-    display:inline-block;
-    list-style-type: none;
-    margin-top: 3.5%;
-     margin-left: 2%;
-     
-}
-header nav ul li a{
-    margin-right: 30px;
-    color: cornsilk;
-    font-size: 30px;
-    text-decoration: blink;
-    letter-spacing:10px;
-    font-family: sans-serif;
-    display: inline;
-}
-header nav ul li a:hover{
-    /* font-size: 40px;
-    text-shadow: 2px 2px #FF0000; */
-    color:cornsilk ;
-    background:text #ff0000 ;
-    background-color: #ff0000;
-    box-shadow: 0 0 9px #ff0000, 0 0 35px #ff0000, 0 0 75px #ff0000;
-    transition-delay: 0.1s;
-
-}
-header div{
-    height: 50%;
-}
-header div img{
-    width: 100%;
-    position: relative;
-    
-}
-/*this is main
-
-
-/* This is footer */
-footer{
+ footer{
     font-family: 'Anton', sans-serif;
-    width: 25%;
+    width: 100%;
     margin: 0 auto;
+
     height: 600%;
     background-color: #27212170;
     margin-top: 30px;
     text-align: center;
-    /* background:  url("https://cdn2.hubspot.net/hubfs/439788/intechnic_2017/assets/images/header-background.png") 0 0 repeat-x */
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+} 
+
+#paraTalk{
+    text-align: center;
 }
-#p{
-    color: cornsilk;
-    margin-top: 40px;
-    padding: 5%;
-    letter-spacing: 2px;
-   
+#npng {
+    text-align: center;
+    font-family: fantasy;
+    color: rgb(255, 9, 9);
+    text-shadow: 3px 3px rgb(105, 76, 76);
+    font-size: 300%;
+    margin-top: 100px;
+    margin-bottom: 0px;
 }
+#talk{
+    /* text-align: center; */
+    font-size: 200%;
+    width: 50%;
+    margin: 50px;
+    border-left: solid 1px rgb(255, 9, 9);
+    padding-left: 8px;
+
+}
+.lightinfo{
+
+ margin-left: 30%;
+ padding-top: 10px;
+   display: inline-block;
+
+}
+.lightinfo1{
+    margin-left: 15%;
+    padding-top: 10px;
+      display: inline-block;
+}
+
+.lightinfo2{
+    margin-left: 15%;
+    padding-top: 10px;
+      display: inline-block;
+
+}
+.members2{
+    margin-bottom: 10px;
+    margin-left: 50px;
+     box-shadow:5px 5px #11101034;
+    display: inline-block;
+    padding: 10px;
+ background-color: #221f1f21;
+    border-radius: 5px;
+}
+.members3 {
+    margin-bottom: 10px;
+    margin-left: 52px;
+    box-shadow:5px 5px #11101034;
+    display: inline-block;
+    padding: 10px;
+ background-color: #221f1f21;
+    border-radius: 5px;
+}
+
+.name {
+margin-bottom: 10px;
+margin-top: 1px;
+margin-right: 0px;
+font-family: 'Abril Fatface', cursive;
+}
+.h4 {
+font-size: 110%;
+    
+}
+.h3{
+    color: rgb(255, 9, 9);
+}
+ .h4 , .h3 {
+    font-family: 'Teko', sans-serif;
+
+    margin: 0px;
+    
+ 
+}
+
+.imgpirso{
+    width: 150px;
+    height: 200px;
+    float: right;
+    margin-top: -70%;
+    margin-left: 150px;
+    border-radius: 5px ;
+    box-shadow: 2px 2px 2px 2px rgba(175, 110, 110, 0.781);
+}
+.imgpirso , .inspara {
+    display: inline-block;
+}
+
+
+#botDivs{
+    margin-left: 100px;
+}
+
+
