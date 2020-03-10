@@ -9,19 +9,19 @@ var italy4 = [' dry bread crumbs', ' dried thyme', ' lemon.'];
 var italy5 = [' fried pastry dough', ' ricotta filling', ' butter.'];
 var extraToItalian = [' Drink', ' Potato', ' Agliata Sauce']
 
-function MealItalian(dish, imgPath, ingredients) {
+function MealItalian(dish, imgPath, ingredients,price) {
     this.dish = dish;
-    this.price;
+    this.price=price;
     this.imgPath = `IMG/${imgPath}`;
     this.ingredients = ingredients;
     this.extraPrice = 0;
     this.quantity;
     mealsItalian.push(this);
 }
-MealItalian.prototype.randomPrice = function () {
+// MealItalian.prototype.randomPrice = function () {
 
-    this.price = Math.floor(Math.random() * (12 - 5 + 1) + 5);
-}
+//     this.price = Math.floor(Math.random() * (12 - 5 + 1) + 5);
+// }
 var c = mealsItalian.length;
 console.log(c);
 
@@ -35,7 +35,7 @@ var formCounter = 0;
 
 MealItalian.prototype.render = function () {
 
-    this.randomPrice();
+    // this.randomPrice();
     var myMenu = document.getElementById('italianDish');
     var ul1 = document.createElement('ul');
     myMenu.appendChild(ul1);
@@ -149,11 +149,11 @@ span2.textContent = `price :${this.price}$ Amount:`;
 
 
 
-var italyDish1 = new MealItalian(italianDishs[0], 'Cioppino.jpg', italy1);
-var italyDish2 = new MealItalian(italianDishs[1], 'Minestra di ceci.png', italy2);
-var italyDish3 = new MealItalian(italianDishs[2], 'pizza.jpg', italy3);
-var italyDish4 = new MealItalian(italianDishs[3], 'Veal Milanese.jpg', italy4);
-var italyDish5 = new MealItalian(italianDishs[4], 'Cannolo.jpg', italy5);
+var italyDish1 = new MealItalian(italianDishs[0], 'Cioppino.jpg', italy1,6.5);
+var italyDish2 = new MealItalian(italianDishs[1], 'Minestra di ceci.png', italy2,7);
+var italyDish3 = new MealItalian(italianDishs[2], 'pizza.jpg', italy3,4);
+var italyDish4 = new MealItalian(italianDishs[3], 'Veal Milanese.jpg', italy4,5);
+var italyDish5 = new MealItalian(italianDishs[4], 'Cannolo.jpg', italy5,4.5);
 var pop = 0;
 function popUp() {
 
@@ -184,19 +184,20 @@ var indian4 = [' Flattended rice', '  potato', 'turmeric', ' lemon.'];
 var indian5 = [' Wheat flour', ' potato mixture', ' paneer.'];
 var extraTOIndian = [' Rice', ' Squared onions', ' Hot Sauce'];
 
-function MealIndian(dish, imgPath, ingredients) {
+function MealIndian(dish, imgPath, ingredients,price) {
 
     this.dish = dish;
-    this.price;
+    this.price=price;
+
     this.imgPath = `IMG/${imgPath}`;
     this.ingredients = ingredients;
     this.quantity;
     mealsIndian.push(this);
 }
-MealIndian.prototype.randomPrice = function () {
+// MealIndian.prototype.randomPrice = function () {
 
-    this.price = Math.floor(Math.random() * (12 - 5 + 1) + 5);
-}
+//     this.price = Math.floor(Math.random() * (12 - 5 + 1) + 5);
+// }
 
 var formCounter1 = 0;
 
@@ -204,7 +205,7 @@ var formCounter1 = 0;
 
 MealIndian.prototype.render1 = function () {
 
-    this.randomPrice();
+    // this.randomPrice();
     var myMenu1 = document.getElementById('indianDish');
     var ul2 = document.createElement('ul');
     myMenu1.appendChild(ul2);
@@ -315,11 +316,11 @@ MealIndian.prototype.render1 = function () {
 //     localStorage.setItem('meal', mealsString2);
 // }
 
-var indianDish1 = new MealIndian(indianDishs[0], 'biryani.jpg', indian1);
-var indianDish2 = new MealIndian(indianDishs[1], 'cheat.jpg', indian2);
-var indianDish3 = new MealIndian(indianDishs[2], 'Alooshimlamirch.jpg', indian3);
-var indianDish4 = new MealIndian(indianDishs[3], 'poha.jpg', indian4);
-var indianDish5 = new MealIndian(indianDishs[4], 'Mintparatha.jpg', indian5);
+var indianDish1 = new MealIndian(indianDishs[0], 'biryani.jpg', indian1,5);
+var indianDish2 = new MealIndian(indianDishs[1], 'cheat.jpg', indian2,7);
+var indianDish3 = new MealIndian(indianDishs[2], 'Alooshimlamirch.jpg', indian3,8);
+var indianDish4 = new MealIndian(indianDishs[3], 'poha.jpg', indian4,6);
+var indianDish5 = new MealIndian(indianDishs[4], 'Mintparatha.jpg', indian5,5);
 var pop1 = 0;
 function popUp1() {
     if (pop1 == 0) {
@@ -351,24 +352,24 @@ var Arabian4 = [' ground chickpeas', ' fava beans', ' spices', 'onion.'];
 var Arabian5 = [' Chicken', ' potato', ' mixed spices', 'flour.'];
 var extraToArabian = [' Drink', ' Yogurt', ' Arabian Salad']
 
-function MealArabian(dish, imgPath, ingredients) {
+function MealArabian(dish, imgPath, ingredients,price) {
     this.dish = dish;
-    this.price;
+    this.price=price;
     this.imgPath = `IMG/${imgPath}`;
     this.ingredients = ingredients;
     this.quantity;
     mealsArabian.push(this);
 }
-MealArabian.prototype.randomPrice = function () {
+// MealArabian.prototype.randomPrice = function () {
 
-    this.price = Math.floor(Math.random() * (12 - 5 + 1) + 5);
-}
+//     this.price = Math.floor(Math.random() * (12 - 5 + 1) + 5);
+// }
 // var counter = 0;
 var formCounter2 = 0;
 
 MealArabian.prototype.render2 = function () {
 
-    this.randomPrice();
+    // this.randomPrice();
     var myMenu3 = document.getElementById('arabianDish');
     var ul3 = document.createElement('ul');
     myMenu3.appendChild(ul3);
@@ -491,11 +492,11 @@ function sentToLocal(mealS) {
 
 
 
-var ArabianDish1 = new MealArabian(ArabianDishs[0], '3_Mansaf-National-Dish.jpg', Arabian1);
-var ArabianDish2 = new MealArabian(ArabianDishs[1], 'maqloba.jpg', Arabian2);
-var ArabianDish3 = new MealArabian(ArabianDishs[2], 'Musakhan-Sumac-Chicken-Recipe-7.jpg', Arabian3);
-var ArabianDish4 = new MealArabian(ArabianDishs[3], 'Falafel-Recipe-20.jpg', Arabian4);
-var ArabianDish5 = new MealArabian(ArabianDishs[4], 'Makmura.jpg', Arabian5);
+var ArabianDish1 = new MealArabian(ArabianDishs[0], '3_Mansaf-National-Dish.jpg', Arabian1,8);
+var ArabianDish2 = new MealArabian(ArabianDishs[1], 'maqloba.jpg', Arabian2,5.5);
+var ArabianDish3 = new MealArabian(ArabianDishs[2], 'Musakhan-Sumac-Chicken-Recipe-7.jpg', Arabian3,6);
+var ArabianDish4 = new MealArabian(ArabianDishs[3], 'Falafel-Recipe-20.jpg', Arabian4,3);
+var ArabianDish5 = new MealArabian(ArabianDishs[4], 'Makmura.jpg', Arabian5,6);
 
 var secArbain = document.getElementById('arabian');
 var pop2 = 0;
