@@ -102,23 +102,8 @@ text-align: center;}
 }
 
 
-/* This is footer */
-footer{
-    font-family: 'Anton', sans-serif;
-    width: 100%;
-    margin: 0 auto;
-    height: 600%;
-    background-color: #27212170;
-    margin-top: 30px;
-    text-align: center;
-}
-#p{
-    color: cornsilk;
-    margin-top: 40px;
-    padding: 5%;
-    letter-spacing: 4px;
-   
-}
+
+
 #p1, li, .getOrder{
 list-style-type: none;
 color :darkred;
