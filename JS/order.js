@@ -10,3 +10,31 @@ if(d3.getMinutes() >30){
 } else {
     document.write("no time");
 }
+
+var meals=[];
+
+function getFromLocal()
+{   var mealString=localStorage.getItem('meal');
+    if (mealString){
+        meals= JSON.parse(mealString);
+        theRender();
+       console.log(meals);
+        
+        
+    }
+   
+
+}
+function theRender(){
+
+    var myelement=document.getElementById('p1');
+
+    for (var i=0; i<meals.length; i++)
+    {
+        var l1=document.createElement('li');
+        myelement.appendChild(l1);
+        l1.textContent=`${meals[i].dish} ${meals[i].price} $ `
+    }
+}
+
+getFromLocal();

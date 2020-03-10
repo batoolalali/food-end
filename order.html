@@ -35,6 +35,11 @@
 
                     <a href="order.html">ORDER</a>
                 </li>
+                <li>
+
+
+                    <a href="about-us.html">ABOUT-US</a>
+                </li>
             </ul>
         </nav>
 
@@ -43,36 +48,34 @@
 
     <main>
         <div class="menuJS">
-            <h1>
-                JS CODE
-            </h1>
+           <p class="getOrder">
+            Your order is:</p>
+            <ul class="getOrder" id="p1">
+
+
+            </ul>
         </div>
-        <div>
+        <div class ="clock">
             <p>Your order will be ready at <span id="demo"></span>:<span id="demo1"></span></p>
             <p>if you need a Delivery Service, Please fill the form below.</p>
         </div>
 
         <div class="map">
             <h3>Please set your location</h3>
+            
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d433870.8339229468!2d35.666748862011346!3d31.835451816341703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151b5fb85d7981af%3A0x631c30c0f8dc65e8!2sAmman!5e0!3m2!1sen!2sjo!4v1583744276359!5m2!1sen!2sjo"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.3199142119724!2d35.87075838535924!3d31.897904135594928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca6e3c8e41335%3A0x38b7f4b7f0dc25d0!2z2YPZhNmK2Kkg2YTZiNmF2YrZhtmI2LMg2KfZhNis2KfZhdi52YrYqSDYp9mE2KrZgtmG2YrYqSAtIChMdW1pbnVzIFRlY2huaWNhbCBVbml2ZXJzaXR5IENvbGxlZ2UgKExUVUM!5e0!3m2!1sar!2sjo!4v1583757804811!5m2!1sar!2sjo"
                 width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" id="map"></iframe>
             <div class="newForm">
-                <form>
-                    <label for="fname">First name:</label><br>
-                    <input type="text" id="fname" name="fname" value="Please Insert you first name only"
-                        size="25px"><br>
-                    <label for="lname">Last name:</label><br>
-                    <input type="text" id="lname" name="lname" value="Please Insert you last name only" size="25px"><br>
-                    <label for="Pnumber">Phone number:</label><br>
-                    <input type="text" id="phoneNu" name="phoneNu" value="Please Insert your Phone number"
-                        size="25px"><br><br>
-                        
-                    <label>Set your location</label>
-                
-                    <select id="myList">
-                        <option value="1">Abu Nusair</option>
-                        <option value="2">Al-Abdalli</option>
+                <div class="form-style-3">
+                    <form onsubmit="return false">
+                    <fieldset><legend>Personal</legend>
+                    <label for="field1"><span>First Name <span class="required">*</span></span><input type="text" class="input-field" name="field1" value="" /></label>
+                    <label for="field2"><span>Last Name <span class="required">*</span></span><input type="text" class="input-field" name="field2" value="" /></label>
+                    <label for="field3"><span>Phone number <span class="required">*</span></span><input type="text" class="input-field" name="field3" value="" /></label>
+                    <label for="field4"><span>Location</span><select name="field4" class="select-field">
+                    <option value="Appointment">Abu Nusair</option>
+                    <option value="2">Al-Abdalli</option>
                         <option value="3">Al-Jubayhah</option>
                         <option value="4">Al-Madinah</option>
                         <option value="5">Al-Yurmuk</option>
@@ -89,10 +92,14 @@
                         <option value="16">Wadi-Alsair</option>
                         <option value="17">Zahran</option>
                         <option value="18">Badr</option>
-                        <br><br>
-                        <input type="submit" value="Submit">
-                    </select>
-                </form>
+                    </select></label>
+                    </fieldset>
+                    <fieldset><legend>Message</legend>
+                    <label for="field6"><span>Message <span class="required">*</span></span><textarea name="field6" class="textarea-field"></textarea></label>
+                    <label><span> </span><input type="submit" value="Submit" id="lastBtn"/></label>
+                    </fieldset>
+                    </form>
+                    </div>
             </div>
         </div>
     </main>
