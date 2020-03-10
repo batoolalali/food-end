@@ -144,9 +144,6 @@ input {
     padding-left: 0 40px;
 }
 
-img{
-    margin: 90px;
-}
 
 
 section img{
@@ -302,37 +299,10 @@ to { box-shadow:0px 0px 20px 5px darkred; }
 }
 
 
-
-
-/* .firstButton:active span , .seconButton:active span , .thirdButton:active span{
-    -webkit-transform: translate(0, 5px); 
-    
-} */
-
-
-
-/* ///////////////////////////////// DONE  */
-/* This is footer */
-footer{
-    font-family: 'Anton', sans-serif;
-    width: 100%;
-    margin: 0 auto;
-    height: 600%;
-    background-color: #27212170;
-    margin-top: 40px;
-    text-align: center;
-}
 #icon {
     display: inline;
 }
    
-#p{
-    color: cornsilk;
-    margin-top: 40px;
-    padding: 5%;
-    letter-spacing: 2px;
-}
-
 
 .epicTitle h1,h2 {
     font-weight: 200;
@@ -468,8 +438,6 @@ to { box-shadow:0px 0px 20px 5px darkred; }
 
  .orderImage{
      margin-left: 100px;
-     margin-top:30px;
-
  }
 
  .orderImage img{
@@ -478,13 +446,15 @@ to { box-shadow:0px 0px 20px 5px darkred; }
     border-top-left-radius: 25%;
     border-top-right-radius:25% ;
     animation: glow 1s infinite alternate;
-    margin-left: 280px;
-    margin-top: -70px;
+    margin-left:20px;
+    margin-top: 35px;
  }
 
 
  .orderImage h3{
   font-size: 25px;
+  display: inline-block;
+  margin-bottom: 5px;
  }
  @keyframes glow {
     from {
