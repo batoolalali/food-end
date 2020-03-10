@@ -2,11 +2,11 @@
 var h1 = [];
 var mealsItalian = [];
 var italianDishs = ['Cioppino: ', 'Minestra di ceci: ', 'Pizza: ', 'Veal Milanese: ', 'Cannoli: '];
-var italy1 = [' Dungeness crab', ' shrimp', ' scallops', ' fish', ' tomatoes'];
-var italy2 = [' salt cod', ' chestnuts', ' artichoke', ' potato', ' tomato', ' pasta', ' cabbage'];
-var italy3 = [' Dough', ' sauce', ' cheese', ' pepper'];
-var italy4 = [' dry bread crumbs', ' dried thyme', ' sliced veal', ' lemon'];
-var italy5 = [' fried pastry dough', ' ricotta filling', ' butter'];
+var italy1 = [' Dungeness crab', ' scallops', ' fish', ' tomatoes.'];
+var italy2 = [' chestnuts',' potato', ' pasta', ' cabbage.'];
+var italy3 = [' Dough', ' sauce', ' cheese', ' pepper.'];
+var italy4 = [' dry bread crumbs', ' dried thyme', ' lemon.'];
+var italy5 = [' fried pastry dough', ' ricotta filling', ' butter.'];
 var extraToItalian = [' Drink', ' Potato', ' Agliata Sauce']
 
 function MealItalian(dish, imgPath, ingredients) {
@@ -55,7 +55,7 @@ MealItalian.prototype.render = function () {
 
     var span2 = document.createElement('span');
     li1.appendChild(span2);
-    span2.textContent = `  ${this.price} $`;
+span2.textContent = `price :${this.price}$ Amount:`;
 
     var numDish2 = document.createElement('input');
     numDish2.setAttribute('type', 'number');
@@ -90,10 +90,12 @@ MealItalian.prototype.render = function () {
     var theForm = document.getElementById(`form${formCounter}`);
     theForm.addEventListener('submit', function (event) {
         event.preventDefault();
+                geeks();
         for (var i = 0; i < mealsItalian.length; i++) {
             var checked2 = document.getElementById(`check${i}`).checked;
             var stepDish = document.getElementById(`steps${i}`).value;
             console.log('step' + stepDish);
+            
             if (checked2 ) {
                 for (var j = (i * 3); j < (i * 3 + 3); j++) {
 
@@ -125,7 +127,7 @@ MealItalian.prototype.render = function () {
         // console.log(mealsItalian[3].dish);
         // console.log(mealsItalian[4].price, "price");
         // console.log(mealsItalian[4].dish);
-
+        
     });
 
     formCounter++;
@@ -169,11 +171,11 @@ console.log(mealsItalian);
 var h2 = [];
 var mealsIndian = [];
 var indianDishs = ['Biryani: ', ' Chaat: ', 'Aloo shimla mirch: ', 'Poha: ', 'Paratha: '];
-var indian1 = [' Mixed rice', ' spices', ' vegetables', ' meats', ' plain yogurt'];
-var indian2 = [' Potato patty fried', ' oil', ' sweet yogurt', ' sauces', ' tomato', ' spices'];
-var indian3 = [' Green capsicum', ' potatoes sautéed', ' onions', 'red chilli powder'];
-var indian4 = [' Flattended rice', '  potato', 'turmeric', ' lemon'];
-var indian5 = [' Wheat flour', ' potato mixture', ' paneer'];
+var indian1 = [' Mixed rice', ' spices', ' meats', ' plain yogurt.'];
+var indian2 = [' Potato patty fried', ' sauces', ' tomato', ' spices.'];
+var indian3 = [' Green capsicum', 'red chilli powder.'];
+var indian4 = [' Flattended rice', '  potato', 'turmeric', ' lemon.'];
+var indian5 = [' Wheat flour', ' potato mixture', ' paneer.'];
 var extraTOIndian = [' Rice', ' Squared onions', ' Hot Sauce'];
 
 function MealIndian(dish, imgPath, ingredients) {
@@ -223,7 +225,7 @@ MealIndian.prototype.render1 = function () {
 
     var span2 = document.createElement('span');
     li1.appendChild(span2);
-    span2.textContent = `  ${this.price} $`;
+    span2.textContent = `price :${this.price}$ Amount:`;
 
     var numDish = document.createElement('input');
     numDish.setAttribute('type', 'number');
@@ -257,6 +259,7 @@ MealIndian.prototype.render1 = function () {
     console.log('here', `formi${formCounter1}`);
     theForm.addEventListener('submit', function (event) {
         event.preventDefault();
+        geeks();
         for (var i = 0; i < mealsIndian.length; i++) {
             var checked2 = document.getElementById(`check${i}`).checked;
             var stepDish = document.getElementById(`steps${i}`).value;
@@ -332,11 +335,11 @@ var h = [];
 // arabian food
 var mealsArabian = [];
 var ArabianDishs = ['Mansaf: ', ' Maqloba: ', 'Musakhan: ', 'Flafel: ', 'Makmura: '];
-var Arabian1 = [' rice', ' lamb', ' bulgur', ' sauce', ' dried yogurt'];
-var Arabian2 = [' chicken', ' rice', ' fried vegetables', ' sauces', ' spices'];
-var Arabian3 = [' chicken baked', ' onions', ' sumac', ' allspice', 'saffron', 'taboon bread'];
-var Arabian4 = [' ground chickpeas', ' fava beans', 'Herbs', ' spices', 'onion'];
-var Arabian5 = [' Chicken', ' potato mixture', ' mixed spices', 'olive oil', 'flour'];
+var Arabian1 = [' rice', ' lamb', ' bulgur', ' sauce', ' dried yogurt.'];
+var Arabian2 = [' chicken', ' fried vegetables', ' sauces', ' spices.'];
+var Arabian3 = [' chicken baked', 'saffron', 'taboon bread.'];
+var Arabian4 = [' ground chickpeas', ' fava beans', ' spices', 'onion.'];
+var Arabian5 = [' Chicken', ' potato', ' mixed spices', 'flour.'];
 var extraToArabian = [' Drink', ' Yogurt', ' Arabian Salad']
 
 function MealArabian(dish, imgPath, ingredients) {
@@ -380,7 +383,7 @@ MealArabian.prototype.render2 = function () {
 
     var span2 = document.createElement('span');
     li1.appendChild(span2);
-    span2.textContent = `  ${this.price} $`;
+    span2.textContent = `price :${this.price}$ Amount:`;
 
     var numDish3 = document.createElement('input');
     numDish3.setAttribute('type', 'number');
@@ -412,6 +415,7 @@ MealArabian.prototype.render2 = function () {
     var theForm = document.getElementById(`forma${formCounter2}`);
     theForm.addEventListener('submit', function (event) {
         event.preventDefault();
+        geeks();
         for (var i = 0; i < mealsArabian.length; i++) {
             var checked2 = document.getElementById(`check${i}`).checked;
             var stepDish = document.getElementById(`steps${i}`).value;
@@ -499,3 +503,24 @@ function popUp2() {
 
 }
 console.log(mealsArabian);
+
+function geeks(msg, gfg) { 
+    var confirmBox = $("#container"); 
+      
+    /* Trace message to display */
+    confirmBox.find(".message").text(msg); 
+      
+    /* Calling function */
+    confirmBox.find(".yes").unbind().click(function()  
+    { 
+    confirmBox.hide(); 
+    }); 
+    confirmBox.find(".yes").click(gfg); 
+    confirmBox.show(); 
+      
+    confirmBox.find(".no").unbind().click(function()  
+    { 
+    confirmBox.hide(); 
+    }); 
+    confirmBox.find(".no").click(gfg); 
+    confirmBox.show(); }
