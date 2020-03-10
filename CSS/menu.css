@@ -210,8 +210,7 @@ section button {
 
 #add0 ,#add1 ,#add2{
     background-color: #706b6b;
-    margin-left: 20px;
-    margin-bottom: 0px;
+    margin-left: 50px;
     height: 30px;
     border-radius: 20%;
     font-size: large;
@@ -220,6 +219,7 @@ section button {
     box-shadow: 0 0 2px #f00d0dea, 0 0 15px #ff0000, 0 0 5px #ff0000;
     transition-delay: 0.2s;
 }
+
 
 #add0:hover , #add1:hover , #add2:hover{
     border:5px solid red;
@@ -350,3 +350,136 @@ text-align: center; }
 from { box-shadow:0px 0px 10px 3px red; }
 to { box-shadow:0px 0px 20px 5px darkred; }
 }
+
+
+#form0{
+    margin-left:84px;
+}
+
+#form1{
+    margin-left:140px;
+}
+
+#form2{
+    margin-left:53px;
+}
+
+#form3{
+    margin-left:124px;
+}
+
+#form4{
+    margin-left:71px;
+}
+
+#forma0{
+    margin-left:74px;
+}
+
+#forma1{
+    margin-left:84px;
+}
+
+#forma2{
+    margin-left:99px;
+}
+
+#forma3{
+    margin-left:55px;
+}
+
+#forma4{
+    margin-left:90px;
+}
+
+#formi0{
+    margin-left:70px;
+}
+
+#formi1{
+    margin-left:58px;
+}
+
+#formi2{
+    margin-left:161px;
+}
+
+#formi3{
+    margin-left:52px;
+}
+
+#formi4{
+    margin-left:75px;
+}
+
+#container { 
+    display: none; 
+    background-color:#706b6b;
+    color: black;
+    font-size: 30px;
+    position: fixed; 
+    width: 450px; 
+    border-radius: 15px; 
+    left: 50%; 
+    margin-left: -200px; 
+    padding: 16px 8px 8px; 
+    box-sizing: border-box; 
+    margin-top: -350px;
+    border: 4px solid #c10000;
+    font-family: 'Londrina Outline', cursive;
+ } 
+   
+ /* Designing dialog box's okay buttun */
+ #container button { 
+    background-color: rgb(161, 112, 112); 
+    display: inline-block; 
+    border-radius: 5px; 
+    border: 2px solid darkred; 
+    padding: 5px; 
+    text-align: center; 
+    width: 60px; 
+    margin-left: 40%;
+    font-size: 20px;
+  
+ } 
+ @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px darkred, 0 0 40px darkred, 0 0 50px darkred, 0 0 60px darkred, 0 0 70px darkred;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 80px red;
+    }
+  }
+ #container button:hover { 
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+ } 
+   
+ /* Dialog box message decorating */
+ #container .message { 
+    text-align: left; 
+    padding: 10px 30px; 
+ } 
+
+ .orderImage{
+     margin-left: 350px;
+
+ }
+
+ .orderImage img{
+    border:3px solid darkred;
+    border-top-left-radius: 25%;
+    border-top-right-radius:25% ;
+    animation: glow 1s infinite alternate;
+ }
+
+ @keyframes glow {
+    from {
+      box-shadow: 0 0 10px -10px red;
+    }
+    to {
+      box-shadow: 0 0 10px 10px darkred;
+    }
+  }
