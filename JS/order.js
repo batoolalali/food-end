@@ -17,6 +17,7 @@ function getFromLocal()
 {   var mealString=localStorage.getItem('meal');
     if (mealString){
         meals= JSON.parse(mealString);
+        totalPrice();
         theRender();
        console.log(meals);
         
@@ -35,6 +36,20 @@ function theRender(){
         myelement.appendChild(l1);
         l1.textContent=`${meals[i].dish} ${meals[i].price} $ `
     }
+    var l2=document.createElement('h2');
+    myelement.appendChild(l2);
+    l2.textContent=`Total  ${total} $ `
+
+
+}
+
+var total=0;
+function totalPrice(){
+    for (var i=0; i<meals.length; i++)
+    {
+        total=total+meals[i].price;
+    }
 }
 
 getFromLocal();
+
