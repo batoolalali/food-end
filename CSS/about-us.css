@@ -77,7 +77,33 @@ body{
  background-color: #221f1f21;
     border-radius: 5px;
 }
+#teachers{
+    font-size: 200%;
+    width: 50%;
+    margin: 50px;
+    border-left: solid 1px rgb(255, 9, 9);
+    padding-left: 8px;
+    margin-bottom: 0;
+}
+.teachers{
+    margin-left: 8%;
+    padding-top: 10px;
+}
+.teacDiv{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    box-shadow:5px 5px #352a2a34;
+    display: inline-block;
+    padding: 10px;
+ background-color: #25242491;
+    border-radius: 5px;
+    color: white;
 
+}
+.h3teac{
+    color: rgb(2, 1, 2);
+    font-family: 'Teko', sans-serif;
+}
 .name {
 margin-bottom: 10px;
 margin-top: 1px;
@@ -91,6 +117,7 @@ font-size: 110%;
 .h3{
     color: rgb(255, 9, 9);
 }
+/* .titaec{} */
  .h4 , .h3 {
     font-family: 'Teko', sans-serif;
 
