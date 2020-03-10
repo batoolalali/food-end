@@ -68,11 +68,11 @@
                 width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" id="map"></iframe>
             <div class="newForm">
                 <div class="form-style-3">
-                    <form >
-                    <fieldset><legend>Personal</legend>
-                    <label for="field1"><span>First Name <span class="required">*</span></span><input type="text" class="input-field" name="field1" value="" /></label>
-                    <label for="field2"><span>Last Name <span class="required">*</span></span><input type="text" class="input-field" name="field2" value="" /></label>
-                    <label for="field3"><span>Phone number <span class="required">*</span></span><input type="text" class="input-field" name="field3" value="" /></label>
+                    <form id="theform">
+                    <fieldset ><legend>Personal</legend>
+                    <label for="field1"><span>First Name <span class="required">*</span></span><input id="fName" type="text" class="input-field" name="field1" value="" /></label>
+                    <label for="field2"><span>Last Name <span class="required">*</span></span><input id="lName" type="text" class="input-field" name="field2" value="" /></label>
+                    <label for="field3"><span>Phone number <span class="required">*</span></span><input id="phone" type="text" class="input-field" name="field3" value="" /></label>
                     <label for="field4"><span>Location</span><select name="field4" class="select-field">
                     <option value="Appointment">Abu Nusair</option>
                     <option value="2">Al-Abdalli</option>
@@ -94,9 +94,9 @@
                         <option value="18">Badr</option>
                     </select></label>
                     </fieldset>
-                    <fieldset><legend>Message</legend>
+                    <fieldset id="field"><legend>Message</legend>
                     <label for="field6"><span>Message <span class="required">*</span></span><textarea name="field6" class="textarea-field"></textarea></label>
-                    <label><span> </span><input type="submit" value="Submit" id="lastBtn"/></label>
+                    <label id='welcome'><span> </span><input type="submit" value="Submit" id="lastBtn"/></label>
                     </fieldset>
                     </form>
                     </div>
@@ -105,14 +105,17 @@
     </main>
 
     <footer>
-        <p>Copyright &copy;2020 FoodEnd.</p>
-        <div id="icon">
-            <img src="img/fb-icon.png">
-            <img src="img/gp-icon.png">
-            <img src="img/insta-icon.png">
-            <img src="img/logo.png" height="24px">
-            <img src="img/twit-icon.png">
-          </div>
+        <p id="p">
+          Copyright &copy;2020 FoodEnd
+            
+        </p>
+          <div id="icon">
+          <img src="img/fb-icon.png">
+          <img src="img/gp-icon.png">
+          <img src="img/insta-icon.png">
+          <img src="img/logo.png" height="24px">
+          <img src="img/twit-icon.png">
+        </div>
     </footer>
     <script src="/JS/order.js"></script>
 </body>
