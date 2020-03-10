@@ -290,6 +290,7 @@ MealIndian.prototype.render1 = function () {
         // console.log(mealsIndian[3].dish);
         // console.log(mealsIndian[4].price, "price");
         // console.log(mealsIndian[4].dish);
+        
 
     });
 
