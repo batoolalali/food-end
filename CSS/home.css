@@ -96,9 +96,8 @@ header div img{
     background-size: cover;
     height:600px;
     margin-top: -20px;
-   
-    filter: blur(3px);
-    -webkit-filter: blur(3px);
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
 }
 
 .container {
