@@ -45,16 +45,9 @@ body{
     transform: scale(1);
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
-    animation: glow 1s infinite alternate;
+
 }
-@keyframes glow {
-    from {
-      box-shadow: 0 0 10px -10px darkred;
-    }
-    to {
-      box-shadow: 0 0 10px 10px red;
-    }
-  }
+
 .lightinfo:hover{
     -webkit-filter: sepia(0);
     filter: sepia(0);
@@ -89,7 +82,6 @@ body{
     transform: scale(1);
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
-    animation: glow 1s infinite alternate;
     margin-top:20px;
 }
 
@@ -114,7 +106,6 @@ body{
     transform: scale(1);
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
-    animation: glow 1s infinite alternate;
 }
 
 .members3:hover{
@@ -152,7 +143,6 @@ body{
     transform: scale(1);
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
-    animation: glow 1s infinite alternate;
 }
 .teacDiv:hover{
     -webkit-filter: sepia(0);
