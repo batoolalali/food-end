@@ -505,10 +505,12 @@ function popUp2() {
         for (var i = 0; i < mealsArabian.length; i++) {
             mealsArabian[i].render2();
         }
+        var brOrder =document.createElement('br');
+        var myform = document.getElementById("forma4");
+        myform.appendChild(brOrder);
         var addOrder = document.createElement('input');
         addOrder.setAttribute('id', `add${inputCounter}`);
         addOrder.setAttribute('type', 'submit');
-        var myform = document.getElementById("forma4");
         myform.appendChild(addOrder);
         inputCounter++;
         pop2 = 1;

@@ -207,12 +207,16 @@ section button {
 
 #add0 ,#add1 ,#add2{
     background-color: #706b6b;
-    margin-left: 50px;
+    margin-left: 660px;
+    margin-top: 50px;
+    width: 150px;
+    padding: 5px 20px;
+padding-bottom: 35px;
     height: 30px;
     border-radius: 20%;
-    font-size: large;
+    font-size: larger;
     font-weight: bold;
-    color: rgb(49, 33, 33);
+    color: rgb(238, 228, 228);
     box-shadow: 0 0 2px #f00d0dea, 0 0 15px #ff0000, 0 0 5px #ff0000;
     transition-delay: 0.2s;
 }
