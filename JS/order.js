@@ -75,4 +75,4 @@ theForm.addEventListener('submit', function (event) {
 }
 test++;
 
-});
+}, {passive: true});

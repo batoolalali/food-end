@@ -41,7 +41,6 @@ MealItalian.prototype.render = function () {
     myMenu.appendChild(myImg);
     myImg.setAttribute('src', this.imgPath);
     myImg.setAttribute('alt', "img");
-    
     var ul1 = document.createElement('ul');
     myMenu.appendChild(ul1);
 
