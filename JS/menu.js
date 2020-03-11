@@ -37,6 +37,11 @@ MealItalian.prototype.render = function () {
 
     // this.randomPrice();
     var myMenu = document.getElementById('italianDish');
+    var myImg = document.createElement('img');
+    myMenu.appendChild(myImg);
+    myImg.setAttribute('src', this.imgPath);
+    myImg.setAttribute('alt', "img");
+    
     var ul1 = document.createElement('ul');
     myMenu.appendChild(ul1);
 
@@ -49,10 +54,7 @@ MealItalian.prototype.render = function () {
     addDish2.setAttribute('id', `checkitaly${formCounter}`);
     li1.appendChild(addDish2);
 
-    var myImg = document.createElement('img');
-    myMenu.appendChild(myImg);
-    myImg.setAttribute('src', this.imgPath);
-    myImg.setAttribute('alt', "img");
+   
 
     var span1 = document.createElement('span');
     li1.appendChild(span1);
@@ -207,6 +209,10 @@ MealIndian.prototype.render1 = function () {
 
     // this.randomPrice();
     var myMenu1 = document.getElementById('indianDish');
+    var myImg = document.createElement('img');
+    myMenu1.appendChild(myImg);
+    myImg.setAttribute('src', this.imgPath);
+    myImg.setAttribute('alt', "img");
     var ul2 = document.createElement('ul');
     myMenu1.appendChild(ul2);
 
@@ -222,10 +228,7 @@ MealIndian.prototype.render1 = function () {
     li1.appendChild(addDish);
 
 
-    var myImg = document.createElement('img');
-    myMenu1.appendChild(myImg);
-    myImg.setAttribute('src', this.imgPath);
-    myImg.setAttribute('alt', "img");
+   
 
     var span1 = document.createElement('span');
     li1.appendChild(span1);
@@ -371,6 +374,10 @@ MealArabian.prototype.render2 = function () {
 
     // this.randomPrice();
     var myMenu3 = document.getElementById('arabianDish');
+    var myImg = document.createElement('img');
+    myMenu3.appendChild(myImg);
+    myImg.setAttribute('src', this.imgPath);
+    myImg.setAttribute('alt', "img");
     var ul3 = document.createElement('ul');
     myMenu3.appendChild(ul3);
 
@@ -383,10 +390,7 @@ MealArabian.prototype.render2 = function () {
     addDish3.setAttribute('id', `checkarabia${formCounter2}`);
     li1.appendChild(addDish3);
 
-    var myImg = document.createElement('img');
-    myMenu3.appendChild(myImg);
-    myImg.setAttribute('src', this.imgPath);
-    myImg.setAttribute('alt', "img");
+   
 
     var span1 = document.createElement('span');
     li1.appendChild(span1);
