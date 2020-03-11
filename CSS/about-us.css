@@ -48,12 +48,10 @@ body{
 
 }
 
-/* .lightinfo:hover{
+.lightinfo:hover{
     -webkit-filter: sepia(0);
     filter: sepia(0);
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-} */
+}
 .lightinfo1{
     margin-left: 15%;
     padding-top: 10px;
